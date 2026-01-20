@@ -1,11 +1,12 @@
-import React from 'react';
-import { ArrowUpRight, FileText } from 'lucide-react';
+import React from "react";
+import { ArrowUpRight, FileText } from "lucide-react";
 
 const projects = [
   {
     title: "Unicorns SCO",
     subtitle: "Международный стартап-акселератор",
-    description: "Ключевая акселерационная программа экосистемы, ориентированная на развитие стартапов и инвестиционную готовность",
+    description:
+      "Ключевая акселерационная программа экосистемы, ориентированная на развитие стартапов и инвестиционную готовность",
     catalogs: [
       { year: "2020", label: "Каталог проектов" },
       { year: "2023", label: "Каталог проектов" },
@@ -14,7 +15,8 @@ const projects = [
   {
     title: "UNIVERSITY Y",
     subtitle: "Образовательная платформа для предпринимателей",
-    description: "Системная образовательная среда для подготовки предпринимателей и развития бизнес-компетенций",
+    description:
+      "Системная образовательная среда для подготовки предпринимателей и развития бизнес-компетенций",
     catalogs: [
       { year: "2021", label: "Каталог проектов" },
       { year: "2024", label: "Каталог проектов" },
@@ -23,7 +25,8 @@ const projects = [
   {
     title: "USTOZ AI",
     subtitle: "AI-платформа для обучения и наставничества",
-    description: "Цифровой инструмент экосистемы, использующий искусственный интеллект для персонализированного обучения",
+    description:
+      "Цифровой инструмент экосистемы, использующий искусственный интеллект для персонализированного обучения",
     catalogs: [
       { year: "2022", label: "Каталог проектов" },
       { year: "2025", label: "Каталог проектов" },
@@ -40,18 +43,22 @@ export default function SectionEight() {
       </h2>
 
       {/* Projects grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
         {projects.map((project, idx) => (
-          <div key={idx} className="bg-[#F1F4F9] rounded-[40px] p-8 flex flex-col justify-between h-full">
-            {/* Top: Title, Subtitle, Description */}
-            <div>
-              <h3 className="text-2xl font-bold uppercase mb-2">{project.title}</h3>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">{project.subtitle}</h4>
+          <div key={idx} className="relative">
+            {/* Card */}
+            <div className="bg-[#F1F4F9] rounded-[40px]  p-8 flex flex-col ">
+              <h3 className="text-2xl font-bold uppercase mb-2">
+                {project.title}
+              </h3>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                {project.subtitle}
+              </h4>
               <p className="text-gray-500">{project.description}</p>
             </div>
 
-            {/* Bottom: Catalog links */}
-            <div className="mt-6 space-y-3">
+            {/* Catalog links outside the card */}
+            <div className="mt-4 space-y-3">
               {project.catalogs.map((cat, i) => (
                 <div
                   key={i}
@@ -59,9 +66,11 @@ export default function SectionEight() {
                 >
                   <div className="flex items-center gap-2">
                     <FileText className="text-gray-400 w-5 h-5" />
-                    <span className="text-sm text-gray-600">{cat.label} · {cat.year}</span>
+                    <span className="text-sm text-gray-600">
+                      {cat.label} · {cat.year}
+                    </span>
                   </div>
-                  <ArrowUpRight className="text-[#E6533C] w-5 h-5" />
+                  <ArrowUpRight className="text-[#E6533C] w-5 h-5 rotate-45" />
                 </div>
               ))}
             </div>

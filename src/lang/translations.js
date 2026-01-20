@@ -1,6 +1,6 @@
 export const translations = {
   ru: {
-    site_name: "Центр поддержки молодежного предпринимательства",
+    site_name: "Центр поддержки молодежного предпринимательства Узбекистане",
     about: "О нас",
     programs: "Программы",
     partners: "Партнеры",
@@ -24,7 +24,7 @@ export const translations = {
     become_partner: "Стать партнером"
   },
   uz: {
-    site_name: "Yoshlar tadbirkorligini qo‘llab-quvvatlash markazi",
+    site_name: "Yoshlar tadbirkorligini qo‘llab-quvvatlash markazi Uzbekistan",
     about: "Biz haqimizda",
     programs: "Dasturlar",
     partners: "Hamkorlar",
@@ -48,7 +48,7 @@ export const translations = {
     become_partner: "Hamkor bo‘lish"
   },
   en: {
-    site_name: "Youth Entrepreneurship Support Center",
+    site_name: "Youth Entrepreneurship Support Center Uzbekistan",
     about: "About",
     programs: "Programs",
     partners: "Partners",
