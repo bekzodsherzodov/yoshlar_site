@@ -67,7 +67,7 @@ function Nav() {
       <div className="hidden md:flex relative ml-4">
         <button
           onClick={() => setLangOpen(!langOpen)}
-          className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow text-sm"
+          className="flex items-center gap-2 bg-[#F1F2F4] px-[25px] py-[20px] rounded-full shadow text-sm"
         >
           {languages.find(l => l.code === lang)?.flag}
           <span>{lang.toUpperCase()}</span>

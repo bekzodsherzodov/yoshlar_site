@@ -33,12 +33,40 @@ function PartnerForm() {
               className="rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] min-h-[150px] transition resize-none"
               placeholder={t("message")}
             />
-            <button 
-              type="submit"
-              className="mt-4 flex items-center justify-center gap-2 bg-[#F24B4B] text-white font-semibold px-6 py-4 rounded-full hover:bg-[#d53a3a] hover:scale-105 transition-transform duration-300"
-            >
-              {t("become_partner")} <FaArrowRightLong />
-            </button>
+          <div className="mb-12 max-w-[700px]">
+  <h2 className="text-[32px] md:text-[64px] text-white font-bold">
+    {t("hero_title")}
+  </h2>
+
+  <div className="relative mt-6 w-fit cursor-pointer hover:scale-105 transition-all duration-300">
+    {/* Background */}
+    <div
+      className="
+        absolute
+        inset-0
+        w-[230px] h-[66px]
+        bg-[#F24B4B]
+        rounded-full
+      "
+    ></div>
+
+    {/* Text */}
+    <p
+      className="
+        relative
+        flex items-center gap-2
+        h-[66px]
+        px-6
+        text-white
+        text-[18px] md:text-[20px]
+      "
+    >
+      {t("hero_btn")}
+      <FaArrowRightLong />
+    </p>
+  </div>
+</div>
+
           </form>
         </div>
 
