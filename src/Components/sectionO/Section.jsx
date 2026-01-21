@@ -25,7 +25,7 @@ function Section({ id }) {
       className="max-w-[1344px] mx-auto rounded-[32px] mt-6 min-h-[600px] bg-cover bg-center relative flex items-center px-6 md:px-12"
       style={{ backgroundImage: `url(${bg})` }}
     >
-   
+      {/* Title va Button */}
       <div className="flex-1 max-w-lg text-white z-10">
         <h2 className="text-[32px] md:text-[64px] font-bold leading-snug">
           {t("hero_title")}
@@ -36,7 +36,8 @@ function Section({ id }) {
         </button>
       </div>
 
-      <div className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-10">
+      {/* Social icons pastda, horizontal */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 z-10">
         {socialIcons.map((item, idx) => (
           <a
             key={idx}
@@ -48,7 +49,7 @@ function Section({ id }) {
         ))}
       </div>
 
-  
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 rounded-[32px]" />
     </motion.section>
   );
