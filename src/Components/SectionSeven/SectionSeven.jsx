@@ -8,7 +8,9 @@ function PartnerForm({ id }) {
   return (
     <section id={id} className="w-full flex justify-center my-24 px-4">
       <div className="flex flex-col lg:flex-row max-w-[1344px] w-full shadow-xl rounded-3xl overflow-hidden">
-        <div className="bg-white p-10 w-full lg:w-1/2 flex flex-col gap-6">
+        
+        {/* Form */}
+        <div className="bg-white p-10 w-full lg:flex-1 flex flex-col gap-6">
           <h2 className="text-3xl font-bold">{t("partner_form_title")}</h2>
           <p className="text-gray-500">{t("partner_form_subtitle")}</p>
 
@@ -23,14 +25,16 @@ function PartnerForm({ id }) {
           </form>
         </div>
 
-        <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[400px] h-[300px]">
-  <iframe
-    className="w-full h-full rounded-3xl"
-    src="https://www.google.com/maps?q=41.285680,69.203464&z=15&output=embed"
-    loading="lazy"
-    allowFullScreen
-  />
-</div>
+        {/* Map */}
+        <div className="w-full lg:flex-1 h-[400px] lg:h-auto">
+          <iframe
+            className="w-full h-full rounded-3xl"
+            src="https://www.google.com/maps?q=41.285680,69.203464&z=15&output=embed"
+            loading="lazy"
+            allowFullScreen
+          />
+        </div>
+
       </div>
     </section>
   );
