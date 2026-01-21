@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import Header from './Components/Header/Header.jsx';
 import Section from './Components/sectionO/Section.jsx';
@@ -16,14 +15,14 @@ function App() {
     <div className="bg-white min-h-screen">
       <Header />
       <main className="w-full">
-        <Section />
-        <SectionT />
-        <SectionThree />
-        <SectionF />
-        <SectionFive />
-        <SectionEight />
-        <SectionSix />
-        <PartnerForm />
+        <Section id="hero"/>
+        <SectionT id="stats"/>
+        <SectionThree id="about"/>
+        <SectionF id="programs"/>
+        <SectionFive id="directions"/>
+        <SectionEight id="projects"/>
+        <SectionSix id="partners"/>
+        <PartnerForm id="contacts"/>
       </main>
       <Footer />
     </div>
