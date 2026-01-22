@@ -10,10 +10,18 @@ function Section({ id }) {
   const { t } = useLang();
 
   const socialIcons = [
-    { icon: <FaYoutube />, link: "#" },
-    { icon: <FaInstagram />, link: "#" },
-    { icon: <FaFacebookF />, link: "#" },
-    { icon: <SiTelegram />, link: "#" },
+    {
+      icon: <FaInstagram />,
+      link: "https://bit.ly/2KzRsh0",
+    },
+    {
+      icon: <FaFacebookF />,
+      link: "https://bit.ly/2SsyIEL",
+    },
+    {
+      icon: <SiTelegram />,
+      link: "https://clck.ru/RXoK9",
+    },
   ];
 
   return (
@@ -36,12 +44,14 @@ function Section({ id }) {
         </button>
       </div>
 
-      {/* Social icons pastda, horizontal */}
+      {/* Social icons pastda */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 z-10">
         {socialIcons.map((item, idx) => (
           <a
             key={idx}
             href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#F24B4B] hover:scale-110 transition-transform"
           >
             {item.icon}
