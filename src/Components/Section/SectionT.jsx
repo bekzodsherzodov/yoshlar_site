@@ -19,27 +19,39 @@ function SectionT({ id }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-[1344px] mx-auto mt-6 bg-[#252422] rounded-[48px] p-6 md:p-12 relative overflow-hidden text-white"
+      className="max-w-[1344px] mx-auto mt-6 bg-[#252422] rounded-[40px] relative overflow-hidden text-white"
     >
-      <div className="flex flex-col md:flex-row justify-between items-center relative">
-        <div className="grid grid-cols-2 gap-6 md:gap-10 flex-1">
+      {/* Background map */}
+      <img
+        src={bg}
+        alt=""
+        className="absolute right-0 top-1/2 -translate-y-1/2 opacity-40 pointer-events-none select-none"
+      />
+
+      <div className="relative z-10 flex items-center justify-between px-12 py-10">
+        
+        {/* Statlar */}
+        <div className="grid grid-cols-2 gap-x-20 gap-y-10">
           {stats.map((stat, idx) => (
-            <div key={idx} className="flex flex-col">
-              <h2 className="text-3xl md:text-4xl font-bold">{stat.value}</h2>
-              <p
-                className="text-sm md:text-base mt-1 text-gray-300"
-                style={{ backgroundImage: `url(${bg})` }}
-              >
+            <div key={idx}>
+              <h2 className="text-4xl font-bold">{stat.value}</h2>
+              <p className="text-sm text-gray-300 mt-1 max-w-[200px]">
                 {stat.label}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="w-36 h-36 bg-red-600 rounded-full flex flex-col items-center justify-center text-white font-semibold text-center p-4 mt-6 md:mt-0 shadow-lg">
-          <span className="text-xl md:text-2xl">{t("badge_years")}</span>
-          <span className="text-sm md:text-base mt-1">{t("badge_experience")}</span>
+        {/* 🔴 Qizil doira — centerga YAQIN */}
+        <div className="w-[180px] h-[180px] -ml-20 bg-[#F24B4B] rounded-full flex flex-col items-center justify-center text-center shadow-2xl">
+          <span className="text-6xl font-bold leading-none -ml-3">
+            9
+          </span>
+          <span className="text-sm mt-1 leading-tight px-6">
+            {t("badge_experience")}
+          </span>
         </div>
+
       </div>
     </motion.section>
   );
