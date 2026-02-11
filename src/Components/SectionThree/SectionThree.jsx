@@ -1,29 +1,20 @@
 import React from "react";
 import { useLang } from "../../lang/LanguageContext";
 
-import gss from "/src/assets/img/person.2.fill.svg";
-import logichka from "/src/assets/img/lightbulb.fill.svg";
-import dollar from "/src/assets/img/dollarsign.circle.fill.svg";
-import building from "/src/assets/img/building.columns.fill.svg";
-import link from "/src/assets/img/link.svg";
-import globe from "/src/assets/img/globe.europe.africa.fill.svg";
+import imageRu from "/src/assets/img/image_ru.svg";
+import imageEn from "/src/assets/img/image_en.svg";
+import imageUz from "/src/assets/img/image_uz.svg";
+import imageCh from "/src/assets/img/image_ch.svg";
 
-import l from "/src/assets/img/Vector.svg";
-import l1 from "/src/assets/img/Vector(1).svg";
-import l2 from "/src/assets/img/Vector(2).svg";
-import l3 from "/src/assets/img/Vector(3).svg";
+const langImages = {
+  ru: imageRu,
+  en: imageEn,
+  uz: imageUz,
+  zh: imageCh,
+};
 
 function SectionThree({ id }) {
-  const { t } = useLang();
-
-  const items = [
-    { text: t("entrepreneurs"), img: gss, y: 60 },
-    { text: t("startup_initiatives"), img: logichka, y: 120 },
-    { text: t("investment_institutions"), img: dollar, y: 180 },
-    { text: t("government_bodies"), img: building, y: 240 },
-    { text: t("partner_organizations"), img: link, y: 300 },
-    { text: t("international_environment"), img: globe, y: 360 },
-  ];
+  const { t, lang } = useLang();
 
   return (
     <section
@@ -32,7 +23,6 @@ function SectionThree({ id }) {
     >
       <div className="flex flex-col md:flex-row items-center gap-12">
 
- 
         <div className="w-full md:w-1/2 order-1 md:order-2 text-center md:text-left max-w-[320px] md:max-w-none mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-[#F24B4B]">{t("site_name")}</span>
@@ -42,84 +32,12 @@ function SectionThree({ id }) {
           </p>
         </div>
 
-      
-        <div className="w-full md:w-1/2 order-2 md:order-1 flex flex-col items-center">
-
-        
-          <svg
-            viewBox="0 0 700 420"
-            className="w-[280px] sm:w-[300px] md:w-full h-auto mx-auto"
-          >
-           
-            <circle
-              cx="200"
-              cy="210"
-              r="92"
-              fill="none"
-              stroke="#e5e7eb"
-              strokeWidth="2"
-            />
-
-         
-            <circle cx="200" cy="210" r="120" fill="#111" />
-
-           
-            <image href={l} x="175" y="145" width="50" height="50" />
-            <image href={l1} x="175" y="170" width="50" height="50" />
-            <image href={l2} x="167" y="220" width="28" height="50" />
-            <image href={l3} x="200" y="220" width="30" height="50" />
-
-            
-            <g className="hidden md:block">
-              {items.map((item, index) => (
-                <g key={index}>
-                  <circle cx="292" cy="210" r="10" fill="#d1d5db" />
-                  <line
-                    x1="292"
-                    y1="210"
-                    x2="420"
-                    y2={item.y}
-                    stroke="#d1d5db"
-                    strokeWidth="2"
-                    strokeDasharray="4 6"
-                  />
-                  <g transform={`translate(432, ${item.y - 20})`}>
-                    <rect width="230" height="40" rx="20" fill="#f3f4f6" />
-                    <image
-                      href={item.img}
-                      x="12"
-                      y="8"
-                      width="24"
-                      height="24"
-                    />
-                    <text
-                      x="44"
-                      y="26"
-                      className="fill-gray-800 text-sm font-medium"
-                    >
-                      {item.text}
-                    </text>
-                  </g>
-                </g>
-              ))}
-            </g>
-          </svg>
-
-          
-          <div className="w-full max-w-[320px] mx-auto space-y-3 md:hidden mt-6">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 bg-gray-100 rounded-full px-5 py-3 shadow-sm"
-              >
-                <img src={item.img} alt="" className="w-5 h-5" />
-                <span className="text-gray-800 text-sm font-medium">
-                  {item.text}
-                </span>
-              </div>
-            ))}
-          </div>
-
+        <div className="w-full md:w-1/2 order-2 md:order-1 flex justify-center">
+          <img
+            src={langImages[lang]}
+            alt={t("site_name")}
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>

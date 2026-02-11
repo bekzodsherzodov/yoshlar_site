@@ -35,31 +35,57 @@ export default function SectionFive({ id }) {
   ];
 
   return (
-    <div id={id} className="max-w-[1344px] bg-[#252422] mx-auto mt-[72px] rounded-[48px] p-8">
-  
-      <div className="text-center mb-16">
-        <h2 className="text-[40px] font-bold">
-          <span className="text-[#F24B4B] block">{t("directions_title_1")}</span>
-          <span className="text-white block mt-2">{t("directions_title_2")}</span>
-        </h2>
-      </div>
+    <div id={id} className="max-w-[1344px] bg-[#252422] mx-auto mt-[72px] rounded-[48px] p-6 md:p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        {/* Title cell */}
+        <div className="flex items-center p-6">
+          <h2 className="text-[32px] md:text-[40px] font-bold leading-tight">
+            <span className="text-[#F24B4B]">{t("directions_title_1")}</span>
+            <br />
+            <span className="text-white">{t("directions_title_2")}</span>
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="relative bg-[#333230] rounded-[32px] pt-16 pb-8 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            className="relative transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
           >
-       
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-              <div className="w-[72px] h-[72px] bg-white rounded-full flex items-center justify-center shadow-lg">
-                {card.icon}
-              </div>
+            {/* Card body */}
+            <div className="bg-[#333230] rounded-[24px] p-6 h-full">
+              <h3 className="text-lg md:text-xl text-white font-semibold leading-snug pr-12">
+                {card.title}
+              </h3>
+              <p className="text-[#8E8E93] text-sm md:text-base mt-3 leading-relaxed">
+                {card.text}
+              </p>
             </div>
 
-      
-            <h3 className="text-[24px] text-white font-semibold">{card.title}</h3>
-            <p className="text-[#8E8E93] text-[20px] mt-2">{card.text}</p>
+            {/* Icon in top-right corner with inverse radius */}
+            <div className="absolute top-0 right-0 z-10">
+              {/* Curved edge - bottom */}
+              <div
+                className="absolute top-full right-0 w-8 h-8 z-0"
+                style={{
+                  boxShadow: "8px -8px 0 8px #252422",
+                  borderRadius: "0 100% 0 0",
+                }}
+              />
+              {/* Curved edge - left */}
+              <div
+                className="absolute top-0 right-full w-8 h-8 z-0"
+                style={{
+                  boxShadow: "8px -8px 0 8px #252422",
+                  borderRadius: "0 100% 0 0",
+                }}
+              />
+              {/* Icon circle */}
+              <div className="bg-[#252422] rounded-bl-[38px] pl-3 pb-3 relative z-10">
+                <div className="w-12 h-12 bg-[#3e3e3b] rounded-full flex items-center justify-center">
+                  {card.icon}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
