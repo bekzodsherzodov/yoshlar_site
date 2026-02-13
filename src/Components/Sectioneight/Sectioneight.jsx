@@ -2,12 +2,16 @@ import React from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import { useLang } from "../../lang/LanguageContext";
 
+import Group28 from "../../assets/img/Group_28.png";
+import UniversityLogo from "../../assets/img/Yoshtadbirkor_University_Logo.png";
+import UstozLogo from "../../assets/img/Ustoz_AI_Logo.png";
+
 export default function SectionEight({ id }) {
   const { t } = useLang();
 
   const projects = [
     {
-      title: "Unicorns SCO",
+      logo: Group28,
       subtitle: t("project_unicorns_subtitle"),
       description: t("project_unicorns_desc"),
       catalogs: [
@@ -16,7 +20,7 @@ export default function SectionEight({ id }) {
       ],
     },
     {
-      title: "UNIVERSITY Y",
+      logo: UniversityLogo,
       subtitle: t("project_university_subtitle"),
       description: t("project_university_desc"),
       catalogs: [
@@ -25,7 +29,7 @@ export default function SectionEight({ id }) {
       ],
     },
     {
-      title: "USTOZ AI",
+      logo: UstozLogo,
       subtitle: t("project_ustoz_subtitle"),
       description: t("project_ustoz_desc"),
       catalogs: [
@@ -38,16 +42,15 @@ export default function SectionEight({ id }) {
   return (
     <section id={id} className="py-16 px-4 bg-white font-sans max-w-[1344px] mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-        {t("projects_title_1")} <span className="text-[#E6533C]">{t("projects_title_2")}</span>
+        {t("projects_title_1")}{" "}
+        <span className="text-[#E6533C]">{t("projects_title_2")}</span>
       </h2>
 
       <div className="relative">
-        {/* Left arrow */}
         <button className="absolute -left-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:text-gray-600 hover:border-gray-300 transition hidden lg:flex">
           <ChevronLeft className="w-5 h-5" />
         </button>
 
-        {/* Right arrow */}
         <button className="absolute -right-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#E6533C] bg-white flex items-center justify-center text-[#E6533C] hover:bg-[#E6533C] hover:text-white transition hidden lg:flex">
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -56,13 +59,28 @@ export default function SectionEight({ id }) {
           {projects.map((project, idx) => (
             <div key={idx} className="relative flex flex-col">
               <div className="relative">
-                <div className="bg-[#F1F4F9] rounded-[32px] p-8 flex flex-col h-full">
-                  <h3 className="text-2xl font-bold mb-2 pr-10">{project.title}</h3>
-                  <h4 className="text-base font-semibold text-gray-900 mb-3">{project.subtitle}</h4>
-                  <p className="text-gray-500 text-sm">{project.description}</p>
+                {/* HEIGHT OZGINA KATTALASHTIRILDI */}
+                <div className="bg-[#F1F4F9] rounded-[32px] p-8 flex flex-col min-h-[260px]">
+
+                  {/* LOGO */}
+                  <img
+                    src={project.logo}
+                    alt="Project Logo"
+                    className={`
+                      object-contain mb-6 block
+                      ${idx === 0 ? "w-[110px]" : "w-[130px] self-start"}
+                    `}
+                  />
+
+                  <h4 className="text-base font-semibold text-gray-900 mb-3">
+                    {project.subtitle}
+                  </h4>
+
+                  <p className="text-gray-500 text-sm">
+                    {project.description}
+                  </p>
                 </div>
 
-                {/* Arrow icon with inverse border radius */}
                 <div className="absolute top-0 right-0 z-10">
                   <div
                     className="absolute top-full right-0 w-6 h-6 z-0"
@@ -94,7 +112,9 @@ export default function SectionEight({ id }) {
                   >
                     <div className="flex items-center gap-2">
                       <FileText className="text-gray-400 w-5 h-5" />
-                      <span className="text-sm text-gray-600">{cat.label} · {cat.year}</span>
+                      <span className="text-sm text-gray-600">
+                        {cat.label} · {cat.year}
+                      </span>
                     </div>
                     <ArrowUpRight className="text-[#E6533C] w-5 h-5" />
                   </div>
