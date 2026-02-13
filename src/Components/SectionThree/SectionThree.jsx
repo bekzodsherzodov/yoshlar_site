@@ -6,11 +6,23 @@ import imageEn from "/src/assets/img/image_en.svg";
 import imageUz from "/src/assets/img/image_uz.svg";
 import imageCh from "/src/assets/img/image_ch.svg";
 
+import mobileRu from "/src/assets/img/mobile_ru.svg";
+import mobileEn from "/src/assets/img/mobile_en.png";
+import mobileUz from "/src/assets/img/mobile_uz.png";
+import mobileZh from "/src/assets/img/mobile_zh.png";
+
 const langImages = {
   ru: imageRu,
   en: imageEn,
   uz: imageUz,
   zh: imageCh,
+};
+
+const mobileLangImages = {
+  ru: mobileRu,
+  en: mobileEn,
+  uz: mobileUz,
+  zh: mobileZh,
 };
 
 function SectionThree({ id }) {
@@ -34,9 +46,14 @@ function SectionThree({ id }) {
 
         <div className="w-full md:w-1/2 order-2 md:order-1 flex justify-center">
           <img
+            src={mobileLangImages[lang]}
+            alt={t("site_name")}
+            className="w-full h-auto md:hidden"
+          />
+          <img
             src={langImages[lang]}
             alt={t("site_name")}
-            className="w-full h-auto"
+            className="w-full h-auto hidden md:block"
           />
         </div>
       </div>
