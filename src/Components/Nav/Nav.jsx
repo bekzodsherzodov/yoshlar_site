@@ -97,7 +97,7 @@ function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="fixed inset-0 h-[60vh] bg-[#F3F3F3] z-[999] flex flex-col justify-between">
+        <div className="fixed inset-0 h-[80vh] bg-[#F3F3F3] z-[999] flex flex-col justify-between">
           <div className="flex items-center justify-between px-5 h-[70px]">
             <div className="flex items-center gap-3">
               <img src={logo} className="w-9 h-9" />
