@@ -23,12 +23,12 @@ const Footer = () => {
               </div>
 
               <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-                {t("about_text")}
-              </p>
-
-              <p className="text-gray-500 text-xs mt-3 max-w-md">
                 {t("footer_platform_text")}
               </p>
+
+              {/* <p className="text-gray-500 text-xs mt-3 max-w-md">
+                {t("footer_platform_text")}
+              </p> */}
             </div>
 
             <div className="hidden md:block mt-12">

@@ -10,10 +10,8 @@ export const translations = {
     address: "Улица Катартал, 60В, Ташкент",
     hero_title: "Развиваем предпринимателей и стартапы в Узбекистане",
     hero_btn: "Стать партнером",
-    about_text:
-      "Центр поддержки молодежного предпринимательства Узбекистана обеспечивает взаимодействие между стартапами, инвесторами, образовательными и государственными институтами.",
-    footer_platform_text:
-      "Институциональная платформа развития предпринимательской экосистемы",
+    about_text: "Центр поддержки молодежного предпринимательства Узбекистана обеспечивает институциональное взаимодействие между стартапами, инвесторами, образовательными и государственными институтами, снижая барьеры входа и повышая эффективность предпринимательской среды.",
+    footer_platform_text: "Институциональная платформа развития предпринимательской экосистемы",
     projects: "Проектов",
     entrepreneurs: "Предпринимателей",
     investments: "Инвестиций",
@@ -68,6 +66,7 @@ export const translations = {
     government_bodies: "Государственные органы",
     partner_organizations: "Партнёрские организации",
     international_environment: "Международная среда",
+    site_names: "Связующее звено предпринимательской экосистемы"
 },
 
   uz: {
@@ -81,10 +80,8 @@ export const translations = {
     address: "Qatartol ko‘chasi, 60B, Toshkent",
     hero_title: "O‘zbekistonda tadbirkorlar va startaplarni rivojlantiramiz",
     hero_btn: "Hamkor bo‘lish",
-    about_text:
-      "Yoshlar tadbirkorligini qo‘llab-quvvatlash markazi startaplar, investorlar va davlat institutlari o‘rtasidagi hamkorlikni ta’minlaydi.",
-    footer_platform_text:
-      "Tadbirkorlik ekotizimini rivojlantirishning institutsional platformasi",
+    about_text: "Oʻzbekiston Yoshlar tadbirkorligini qoʻllab-quvvatlash markazi tadbirkorlar, startaplar, taʼlim muassasalari, investitsiya tashkilotlari, davlat organlari va xalqaro hamkorlar oʻrtasidagi institutsional hamkorlikni taʼminlaydi hamda tadbirkorlik ekotizimining barqaror rivojlanishiga xizmat qiladi.",
+    footer_platform_text: "Tadbirkorlik ekotizimini rivojlantirishning institutsional platformasi",
     projects: "Loyihalar",
     entrepreneurs: "Tadbirkorlar",
     investments: "Investitsiyalar",
@@ -138,7 +135,8 @@ export const translations = {
     investment_institutions: "Investitsiya institutlari",
     government_bodies: "Davlat organlari",
     partner_organizations: "Hamkor tashkilotlar",
-    international_environment: "Xalqaro muhit", 
+    international_environment: "Xalqaro muhit",
+    site_names: "Tadbirkorlik ekotizimini bog‘lovchi bo‘g‘in" 
 },
 
   en: {
@@ -152,10 +150,8 @@ export const translations = {
     address: "Katartal street, 60B, Tashkent",
     hero_title: "We develop entrepreneurs and startups in Uzbekistan",
     hero_btn: "Become a partner",
-    about_text:
-      "The Youth Entrepreneurship Support Center ensures collaboration between startups, investors, educational and governmental institutions.",
-    footer_platform_text:
-      "Institutional platform for the development of the entrepreneurial ecosystem",
+    about_text: "The Youth Entrepreneurship Support Center of Uzbekistan acts as a connecting link between entrepreneurs, startups, educational institutions, investment organizations, government bodies, and international partners, supporting the sustainable development of the entrepreneurial ecosystem",
+    footer_platform_text: "Institutional platform for the development of the entrepreneurial ecosystem",
     projects: "Projects",
     entrepreneurs: "Entrepreneurs",
     investments: "Investments",
@@ -209,6 +205,7 @@ export const translations = {
     government_bodies: "Government bodies",
     partner_organizations: "Partner organizations",
     international_environment: "International environment",
+    site_names: "A Connecting Link of the Entrepreneurial Ecosystem"
 },
 
   zh: {
@@ -222,10 +219,8 @@ export const translations = {
     address: "乌兹别克斯坦，塔什干，卡塔尔托尔街60B",
     hero_title: "我们在乌兹别克斯坦发展创业者和初创企业",
     hero_btn: "成为合作伙伴",
-    about_text:
-      "青年创业支持中心促进初创企业、投资者、教育机构和政府机构之间的合作。",
-    footer_platform_text:
-      "创业生态系统发展的制度化平台",
+    about_text:"乌兹别克斯坦青年创业支持中心  在企业家、初创企业、教育机构、投资组织、政府机构及国际合作伙伴之间建立制度化合作，推动创业生态体系的可持续发展。",
+    footer_platform_text: "创业生态系统发展的制度化平台",
     projects: "项目数量",
     entrepreneurs: "创业者",
     investments: "投资",
@@ -280,5 +275,6 @@ export const translations = {
     government_bodies: "政府机构",
     partner_organizations: "合作组织",
     international_environment: "国际环境",
+    site_names: "创业生态体系的  连接枢纽"
   },
 };

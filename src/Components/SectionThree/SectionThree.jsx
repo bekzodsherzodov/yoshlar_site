@@ -37,7 +37,7 @@ function SectionThree({ id }) {
 
         <div className="w-full md:w-1/2 order-1 md:order-2 text-center md:text-left max-w-[320px] md:max-w-none mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#F24B4B]">{t("site_name")}</span>
+            <span className="text-[#F24B4B]">{t("site_names")}</span>
           </h2>
           <p className="text-gray-500 text-base md:text-lg leading-relaxed">
             {t("about_text")}
