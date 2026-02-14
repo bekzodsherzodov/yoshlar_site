@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './../../assets/img/logo.png';
 import { RU, GB, UZ, CN } from 'country-flag-icons/react/3x2';
 import { useLang } from '../../lang/LanguageContext';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 function Nav() {
   const { lang, setLang, t } = useLang();
@@ -27,10 +28,12 @@ function Nav() {
     setMenuOpen(false);
   };
 
+  const selectedLang = languages.find(l => l.code === lang);
+
   return (
     <div className="flex items-center justify-between w-full max-w-[1344px] mx-auto mt-4 px-4 xl:px-0">
 
- 
+      {/* Desktop nav */}
       <nav className="flex items-center gap-6 bg-[#F1F2F4] rounded-full px-6 md:px-10 h-[72px] shadow-sm flex-1">
         <div className="flex items-center gap-3">
           <img src={logo} className="w-9 h-9" />
@@ -51,7 +54,37 @@ function Nav() {
           ))}
         </div>
 
-       
+        {/* Language dropdown desktop */}
+        <div className="hidden md:flex relative ml-4">
+          <button
+            onClick={() => setLangOpen(!langOpen)}
+            className="flex items-center gap-2 bg-[#F1F2F4] px-[25px] py-[20px] rounded-full shadow text-sm"
+          >
+            {selectedLang?.flag}
+            <span>{selectedLang?.label}</span>
+            {langOpen ? <FaChevronUp className="w-3 h-3" /> : <FaChevronDown className="w-3 h-3" />}
+          </button>
+
+          {langOpen && (
+            <div className="absolute right-0 mt-2 bg-white rounded-xl shadow w-32 overflow-hidden z-50">
+              <p className="px-4 py-2 text-gray-500 font-semibold border-b">
+                {t("languages")}
+              </p>
+              {languages.map(l => (
+                <div
+                  key={l.code}
+                  onClick={() => { setLang(l.code); setLangOpen(false); }}
+                  className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
+                >
+                  {l.flag} {l.label}
+                  {lang === l.code && <span className="ml-auto text-green-500">✔</span>}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Hamburger mobile */}
         <button
           className="lg:hidden flex flex-col gap-1.5 ml-auto"
           onClick={() => setMenuOpen(true)}
@@ -61,34 +94,6 @@ function Nav() {
           <span className="h-[2px] w-5 bg-black" />
         </button>
       </nav>
-
-  
-      <div className="hidden md:flex relative ml-4">
-        <button
-          onClick={() => setLangOpen(!langOpen)}
-          className="flex items-center gap-2 bg-[#F1F2F4] px-[25px] py-[20px] rounded-full shadow text-sm"
-        >
-          {languages.find(l => l.code === lang)?.flag}
-          <span>{lang.toUpperCase()}</span>
-        </button>
-
-        {langOpen && (
-          <div className="absolute right-0 mt-2 bg-white rounded-xl shadow w-32 overflow-hidden z-50">
-            <p className="px-4 py-2 text-gray-500 font-semibold border-b">
-              {t("languages")}
-            </p>
-            {languages.map(l => (
-              <div
-                key={l.code}
-                onClick={() => { setLang(l.code); setLangOpen(false); }}
-                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
-              >
-                {l.flag} {l.label}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
 
       {/* Mobile menu */}
       {menuOpen && (
@@ -107,22 +112,30 @@ function Nav() {
             </button>
           </div>
 
-          <div className="px-6 flex-1 flex flex-col justify-center">
-            <p className="text-red-500 font-semibold mb-4">
-              {t("navigation")}
-            </p>
-            <div className="flex flex-col gap-4 text-[16px] font-medium">
-              {navItems.map(item => (
-                <button
-                  key={item.key}
-                  onClick={() => handleScroll(item.href)}
-                  className="text-left"
-                >
-                  {t(item.key)}
-                </button>
-              ))}
-            </div>
-          </div>
+         <div className="px-6 flex-1 flex flex-col justify-center">
+  <p className="text-red-500 font-semibold mb-4">
+    {t("navigation")}
+  </p>
+  <div className="flex flex-col gap-4 text-[16px] font-medium">
+    {navItems.map((item, idx) => (
+      <React.Fragment key={item.key}>
+        <button
+          onClick={() => handleScroll(item.href)}
+          className="text-left"
+        >
+          {t(item.key)}
+        </button>
+
+        {/* Mobile: Контакты va Языки orasida hr */}
+{item.key === "contacts" && (
+  <hr className="border-t-[2px] border-gray-400 my-2 w-full" />
+)}
+
+      </React.Fragment>
+    ))}
+  </div>
+</div>
+
 
           <div className="px-6 pb-6">
             <p className="text-red-500 font-semibold mb-4">
