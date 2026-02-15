@@ -62,7 +62,7 @@ const Footer = () => {
                 </h3>
               </div>
 
-              {/* Platform text */}
+              {/* Platform text - pastga tushirildi */}
               <p 
                 style={{
                   maxWidth: '445px',
@@ -72,7 +72,9 @@ const Footer = () => {
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#7F7F7F80',
-                  marginTop: '8px'
+                  marginTop: '53px',
+                  
+                  
                 }}
               >
                 {t("footer_platform_text")}
@@ -112,7 +114,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li 
-                className="hover:text-[#E6533C] cursor-pointer" 
+                className="cursor-pointer" 
                 onClick={() => document.getElementById('about')?.scrollIntoView({behavior:'smooth'})}
                 style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -124,7 +126,7 @@ const Footer = () => {
                 {t("about")}
               </li>
               <li 
-                className="hover:text-[#E6533C] cursor-pointer" 
+                className="cursor-pointer" 
                 onClick={() => document.getElementById('programs')?.scrollIntoView({behavior:'smooth'})}
                 style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -136,7 +138,7 @@ const Footer = () => {
                 {t("programs")}
               </li>
               <li 
-                className="hover:text-[#E6533C] cursor-pointer" 
+                className="cursor-pointer" 
                 onClick={() => document.getElementById('partners')?.scrollIntoView({behavior:'smooth'})}
                 style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -148,7 +150,7 @@ const Footer = () => {
                 {t("partners")}
               </li>
               <li 
-                className="hover:text-[#E6533C] cursor-pointer" 
+                className="cursor-pointer" 
                 onClick={() => document.getElementById('contacts')?.scrollIntoView({behavior:'smooth'})}
                 style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -179,7 +181,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="tel:+998500109242" 
-                  className="hover:text-[#E6533C] transition"
+                  className="transition"
                   style={{
                     fontFamily: 'Manrope, sans-serif',
                     fontWeight: 600,
@@ -193,7 +195,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="mailto:yoshtadbirkorgr@gmail.com" 
-                  className="hover:text-[#E6533C] transition"
+                  className="transition"
                   style={{
                     fontFamily: 'Manrope, sans-serif',
                     fontWeight: 600,
@@ -229,7 +231,7 @@ const Footer = () => {
                 color: '#7F7F7F80'
               }}
             >
-              © O’zbekiston Yoshlar Tadbirkorligini Qo’llab Quvvatlash Markazi, 2020–2026
+              © O'zbekiston Yoshlar Tadbirkorligini Qo'llab Quvvatlash Markazi, 2020–2026
             </p>
           </div>
 
