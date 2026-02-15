@@ -62,12 +62,38 @@ export default function SectionFive({ id }) {
       >
         {/* Card body */}
         <div className="bg-[#333230] rounded-[24px] p-6 h-full">
-          <h3 className="text-lg md:text-xl text-white font-semibold leading-snug pr-12">
-            {card.title}
-          </h3>
-          <p className="text-[#8E8E93] text-sm md:text-base mt-3 leading-relaxed">
-            {card.text}
-          </p>
+       <h3
+  className="text-white pr-12"
+  style={{
+    fontFamily: "Manrope",
+    fontWeight: 600,
+    fontSize: "24px",
+    lineHeight: "30px",
+    display: "-webkit-box",
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+  }}
+>
+  {card.title}
+</h3>
+         <p
+  className="text-[#8E8E93] mt-4"
+  style={{
+    fontFamily: "Manrope",
+    fontWeight: 400,
+    fontSize: "20px",
+    lineHeight: "150%",
+    display: "-webkit-box",
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+  }}
+>
+  {card.text}
+</p>
+
+
         </div>
 
         {/* Icon in top-right corner with inverse radius */}

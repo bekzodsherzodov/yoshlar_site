@@ -29,21 +29,42 @@ function SectionThree({ id }) {
   const { t, lang } = useLang();
 
   return (
-    <section
-      id={id}
-      className="max-w-[1344px] mx-auto px-4 md:px-0 mt-16"
-    >
+    <section id={id} className="max-w-[1344px] mx-auto px-4 md:px-0 mt-16">
       <div className="flex flex-col md:flex-row items-center gap-12">
 
-        <div className="w-full md:w-1/2 order-1 md:order-2 text-center md:text-left max-w-[320px] md:max-w-none mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#F24B4B]">{t("site_names")}</span>
+        {/* Text Block */}
+        <div className="w-full md:w-1/2 order-1 md:order-2 mx-auto md:mx-0 text-left pl-12">
+          
+<h2
+  className="mb-4 text-left text-[28px] leading-[34px] md:text-[40px] md:leading-[48px]"
+  style={{
+    fontFamily: "Manrope",
+    fontWeight: 700,
+    maxWidth: "523px",
+  }}
+>
+            <span className="block text-[#F24B4B]">{t("site_names_1")}</span>
+            <span className="block text-[#000000]">{t("site_names_2")}</span>
+            <span className="block text-[#000000]">{t("site_names_3")}</span>
           </h2>
-          <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+
+        {/* Paragraph */}
+<p
+  className="text-gray-500 text-[14px] leading-[22px] md:text-base md:leading-relaxed text-left"
+  style={{
+    maxWidth: "400px",
+    display: "-webkit-box",
+    WebkitLineClamp: 8,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+  }}
+>
+
             {t("about_text")}
           </p>
         </div>
 
+        {/* Image Block */}
         <div className="w-full md:w-1/2 order-2 md:order-1 flex justify-center">
           <img
             src={mobileLangImages[lang]}
@@ -56,6 +77,7 @@ function SectionThree({ id }) {
             className="w-full h-auto hidden md:block"
           />
         </div>
+
       </div>
     </section>
   );

@@ -40,14 +40,14 @@ function SectionSix({ id }) {
       id={id}
       className="
         w-full
+        min-h-[800px] md:min-h-0
         max-w-[90%] sm:max-w-[90%] md:max-w-[1344px]
         mx-auto mt-12 bg-[#252422] rounded-[20px] md:rounded-[48px]
-        px-5 md:px-12 py-8 md:py-12
-      "
+        px-8 md:px-12 py-8 md:py-12"
     >
       {/* Desktop: Text + 3 logo */}
       <div className="hidden md:flex items-start justify-between gap-6 mb-12">
-        <div className="max-w-md text-left flex-shrink-0">
+        <div className="max-w-md text-left flex-shrink-0 mt-10 ">
           <h2 className="text-[40px] font-bold text-white leading-snug">
             <span className="text-[#F24B4B]">{t("partnership_title")}</span>
             <br />
@@ -55,7 +55,7 @@ function SectionSix({ id }) {
           </h2>
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex gap-8 mt-15">
           {firstLogosDesktop.map((logo, index) => (
             <div
               key={index}
@@ -97,7 +97,7 @@ function SectionSix({ id }) {
       </div>
 
       {/* Desktop: Qolgan logolar grid */}
-      <div className="hidden md:grid grid-cols-5 gap-6 justify-items-center">
+      <div className="hidden md:grid grid-cols-5 gap-6 justify-items-center my-[-40px]">
         {restLogosDesktop.map((logo, index) => (
           <div
             key={index}
