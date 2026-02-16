@@ -82,7 +82,23 @@ export const translations = {
 
     form_success: "Ваши данные успешно отправлены",
     form_error: "Все поля обязательны для заполнения",
-    sending: "Отправка..."
+    sending: "Отправка...",
+
+    become_partner_full: "Отправить обращение",
+become_partner_short: "Отп",
+
+project_imkoniyat_subtitle: "Программа поддержки предпринимательских инициатив",
+    project_imkoniyat_desc: "Инструмент расширения возможностей для запуска и развития предпринимательских проектов",
+    
+    project_aica_subtitle: "Центр развития искусственного интеллекта",
+    project_aica_desc: "Экспертная платформа для развития AI-инициатив, исследований и прикладных решений",
+    
+    project_unicorns_new_subtitle: "Стартап-сообщество и платформа взаимодействия",
+    project_unicorns_new_desc: "Коммуникационная среда для взаимодействия стартапов, инвесторов и экспертов",
+
+
+     button_circle_text: "Отп",
+    button_main_text: "равить обращение",
   },
 
   uz: {
@@ -182,7 +198,25 @@ export const translations = {
       "Ma'lumotlaringiz muvaffaqiyatli yuborildi",
     form_error:
       "Har bir qatorni to'ldirish majburiy",
-    sending: "Yuborilmoqda..."
+    sending: "Yuborilmoqda...",
+
+    become_partner_full: "So‘rov yuborish",
+become_partner_short: "Yub",
+
+    project_imkoniyat_subtitle: "Tadbirkorlik tashabbuslarini qo'llab-quvvatlash dasturi",
+    project_imkoniyat_desc: "Tadbirkorlik loyihalarini boshlash va rivojlantirish imkoniyatlarini kengaytirish vositasi",
+    
+    // AICA
+    project_aica_subtitle: "Sun'iy intellektni rivojlantirish markazi",
+    project_aica_desc: "AI tashabbuslarini, tadqiqotlarni va amaliy yechimlarni rivojlantirish uchun ekspert platformasi",
+    
+    // Unicorns New
+    project_unicorns_new_subtitle: "Startap hamjamiyati va o'zaro aloqa platformasi",
+    project_unicorns_new_desc: "Startaplar, investorlar va ekspertlar o'zaro muloqoti uchun kommunikatsiya muhiti",
+
+
+      button_circle_text: "Yubo", // Doira ichidagi qisqa text
+    button_main_text: "rish",
   },
 
   en: {
@@ -296,7 +330,25 @@ export const translations = {
       "Your information has been successfully sent",
     form_error:
       "All fields are required",
-    sending: "Sending..."
+    sending: "Sending...",
+
+    become_partner_full: "Send request",
+become_partner_short: "Send",
+
+    
+    project_imkoniyat_subtitle: "Entrepreneurial Initiatives Support Program",
+    project_imkoniyat_desc: "A tool for expanding opportunities to launch and develop entrepreneurial projects",
+    
+    project_aica_subtitle: "Artificial Intelligence Development Center",
+    project_aica_desc: "Expert platform for developing AI initiatives, research and applied solutions",
+    
+    project_unicorns_new_subtitle: "Startup Community and Interaction Platform",
+    project_unicorns_new_desc: "Communication environment for interaction between startups, investors and experts",
+
+
+         button_circle_text: "Sub",
+    button_main_text: "mit request",
+
   },
 
   zh: {
@@ -409,6 +461,29 @@ export const translations = {
       "您的信息已成功发送",
     form_error:
       "所有字段均为必填项",
-    sending: "发送中..."
-  }
+    sending: "发送中...",
+
+      "become_partner_full": "发送请求",
+  "become_partner_short": "发",
+
+
+  project_imkoniyat_subtitle: "创业倡议支持计划",
+    project_imkoniyat_desc: "扩大创业项目启动和发展机会的工具",
+    
+    project_aica_subtitle: "人工智能发展中心",
+    project_aica_desc: "用于发展人工智能倡议、研究和应用解决方案的专家平台",
+    
+    project_unicorns_new_subtitle: "初创企业社区和互动平台",
+    project_unicorns_new_desc: "初创企业、投资者和专家之间的交流环境",
+
+
+
+    button_circle_text: "提交",
+    button_main_text: "请求",
+
+  },
+  
 };
+
+
+

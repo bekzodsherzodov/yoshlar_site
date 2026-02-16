@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLang } from "../../lang/LanguageContext";
 
 function SectionT({ id }) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const stats = [
     { value: "50+", label: t("stats_projects") },
@@ -12,6 +12,38 @@ function SectionT({ id }) {
     { value: "$8,5 млн", label: t("stats_investments") },
     { value: "20+", label: t("stats_partners") },
   ];
+
+  // Badge text strukturasi tilga qarab
+  const getBadgeText = () => {
+    if (lang === 'en') {
+      return {
+        years: "9 year",
+        experience: "Of continuous work"
+      };
+    } else if (lang === 'ru') {
+      return {
+        years: "9 лет",
+        experience: "непрерывной работы"
+      };
+    } else if (lang === 'uz') {
+      return {
+        years: "9 yil",
+        experience: "uzluksiz ish"
+      };
+    } else if (lang === 'zh') {
+      return {
+        years: "9年",
+        experience: "持续工作"
+      };
+    } else {
+      return {
+        years: t("badge_years"),
+        experience: t("badge_experience")
+      };
+    }
+  };
+
+  const badgeText = getBadgeText();
 
   return (
     <motion.section
@@ -77,28 +109,25 @@ function SectionT({ id }) {
             relative
             w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[270px] md:h-[270px]
             rounded-[100px] sm:rounded-[110px] md:rounded-[131px]
-            left-0 md:left-[150px]  // mobile = 0, desktop = chapga surish
+            left-0 md:left-[150px]
           "
           style={{
             backgroundColor: "#F24B4B",
-            paddingTop: "59px",
-            paddingRight: "28px",
-            paddingBottom: "59px",
-            paddingLeft: "28px",
-            gap: "10px",
+            padding: "40px 20px",
+            gap: "8px",
           }}
         >
           <span
-            className="text-[48px] sm:text-[56px] md:text-[64px] font-bold leading-[100%] text-center lg:w-[163px] lg:h-[87px]"
+            className="text-[48px] sm:text-[56px] md:text-[64px] font-bold leading-[100%] text-center"
             style={{ fontFamily: "Manrope", fontWeight: 700 }}
           >
-            {t("badge_years")}
+            {badgeText.years}
           </span>
           <span
-            className="text-[20px] font-regular leading-[100%] text-center lg:w-[206px] lg:h-[27px]"
+            className="text-[16px] sm:text-[18px] md:text-[20px] font-normal leading-[120%] text-center max-w-[90%]"
             style={{ fontFamily: "Manrope", fontWeight: 400 }}
           >
-            {t("badge_experience")}
+            {badgeText.experience}
           </span>
         </div>
       </div>

@@ -13,8 +13,16 @@ function Section({ id }) {
     { icon: <FaYoutube />, link: "https://youtube.com" },
     { icon: <FaInstagram />, link: "https://bit.ly/2KzRsh0" },
     { icon: <FaFacebookF />, link: "https://bit.ly/2SsyIEL" },
-    { icon: <SiTelegram />, link: "https://clck.ru/RXoK9" },
+    { icon: <SiTelegram />, link: "https://t.me/yoshtadbirkoruzb" },
   ];
+
+  // ✅ Scroll to PartnerForm function
+  const handleScrollToForm = () => {
+    const contactsSection = document.getElementById('contacts');
+    if (contactsSection) {
+      contactsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="max-w-[1344px] mx-auto mt-6 px-4">
@@ -51,9 +59,13 @@ function Section({ id }) {
 </h2>
         </div>
 
-        {/* BUTTON */}
+        {/* BUTTON - ✅ onClick qo'shildi */}
         <div className="mt-8 z-10">
-          <button className="flex items-center relative" style={{ fontFamily: "Manrope" }}>
+          <button 
+            onClick={handleScrollToForm}
+            className="flex items-center relative cursor-pointer hover:opacity-90 transition" 
+            style={{ fontFamily: "Manrope" }}
+          >
             
             {/* Qizil doira */}
             <span
