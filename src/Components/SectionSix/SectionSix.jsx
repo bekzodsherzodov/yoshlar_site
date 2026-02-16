@@ -47,9 +47,20 @@ function SectionSix({ id }) {
     >
       {/* Desktop: Text + 3 logo */}
       <div className="hidden md:flex items-start justify-between gap-6 mb-12">
-        <div className="max-w-md text-left flex-shrink-0 mt-10 ">
-          <h2 className="text-[40px] font-bold text-white leading-snug">
-            <span className="text-[#F24B4B]">{t("partnership_title")}</span>
+        <div className="text-left flex-shrink-0 mt-[50px] ml-[40px]">
+          <h2 
+            style={{
+              width: '474px',
+              height: '96px',
+              fontFamily: 'Manrope',
+              fontWeight: 700,
+              fontSize: '40px',
+              lineHeight: '48px',
+              letterSpacing: '0%',
+              color: '#FFFFFF'
+            }}
+          >
+            <span style={{ color: '#F24B4B' }}>{t("partnership_title")}</span>
             <br />
             {t("partnership_subtitle")}
           </h2>
@@ -64,7 +75,7 @@ function SectionSix({ id }) {
               <img
                 src={logo}
                 alt="logo"
-                className="max-h-[100px] max-w-full object-contain opacity-80 hover:opacity-100 transition duration-300"
+                className="max-h-[100px] max-w-full object-contain opacity-80 transition duration-300"
               />
             </div>
           ))}
@@ -90,7 +101,7 @@ function SectionSix({ id }) {
             <img
               src={logo}
               alt="logo"
-              className="max-h-[50px] max-w-full object-contain opacity-80 hover:opacity-100 transition duration-300"
+              className="max-h-[50px] max-w-full object-contain opacity-80 transition duration-300"
             />
           </div>
         ))}
@@ -106,7 +117,7 @@ function SectionSix({ id }) {
             <img
               src={logo}
               alt="logo"
-              className="max-h-[50px] max-w-full object-contain opacity-80 hover:opacity-100 transition duration-300"
+              className="max-h-[50px] max-w-full object-contain opacity-80 transition duration-300"
             />
           </div>
         ))}
