@@ -86,9 +86,9 @@ function PartnerForm({ id }) {
             letter-spacing: 0%;
           }
 
-          /* Input and textarea text color */
+          /* Input and textarea text color - QORA RANG */
           input, textarea {
-            color: #FFFFFF;
+            color: #000000;
           }
 
           /* Sarlavha responsive width */

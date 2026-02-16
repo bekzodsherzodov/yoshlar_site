@@ -19,9 +19,10 @@ export default function SectionEight({ id }) {
       description: t("project_unicorns_desc"),
       descriptionHeight: 135,
       descriptionColor: "#7F7F7F80",
+      websiteUrl: "https://unicorns.uz/ru",
       catalogs: [
-        { year: "2020", label: t("project_catalog") },
-        { year: "2023", label: t("project_catalog") },
+        { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" }, 
+        { year: "2023", label: t("project_catalog"), pdf: "/pdfs/2023-katalog (1).pdf" }, 
       ],
     },
     {
@@ -33,9 +34,10 @@ export default function SectionEight({ id }) {
       description: t("project_university_desc"),
       descriptionHeight: 81,
       descriptionColor: "#7F7F7F80",
+      websiteUrl: "https://yoshtadbirkor.uz/university",
       catalogs: [
-        { year: "2021", label: t("project_catalog") },
-        { year: "2024", label: t("project_catalog") },
+        { year: "2021", label: t("project_catalog"), pdf: "/pdfs/2021-katalog_compressed.pdf" },
+        { year: "2024", label: t("project_catalog"), pdf: null }, 
       ],
     },
     {
@@ -47,12 +49,25 @@ export default function SectionEight({ id }) {
       description: t("project_ustoz_desc"),
       descriptionHeight: 108,
       descriptionColor: "#7F7F7F80",
+      websiteUrl: "https://www.ustoz.ai/",
       catalogs: [
-        { year: "2022", label: t("project_catalog") },
-        { year: "2025", label: t("project_catalog") },
+        { year: "2022", label: t("project_catalog"), pdf: "/pdfs/2022-katalog_compressed.pdf" }, 
+        { year: "2025", label: t("project_catalog"), pdf: null }, 
       ],
     },
   ];
+
+  const handleCatalogClick = (pdf, year) => {
+    if (pdf) {
+      window.open(pdf, '_blank');
+    } else {
+      alert(`${year} yil uchun katalog hozircha mavjud emas`);
+    }
+  };
+
+  const handleLogoClick = (url) => {
+    window.open(url, '_blank');
+  };
 
   return (
     <section id={id} className="py-16 px-4 bg-white font-sans max-w-[1344px] mx-auto ">
@@ -63,69 +78,67 @@ export default function SectionEight({ id }) {
 
       <div className="relative ">
         {/* Slider Buttons */}
-       {/* Slider Buttons */}
-<button className="absolute -left-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-gray-200 bg-[#F1F2F4] flex items-center justify-center transition hidden lg:flex">
-  <ChevronLeft className="w-5 h-5 text-white" />
-</button>
-<button className="absolute -right-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#E6533C] bg-[#E6533C] flex items-center justify-center transition hidden lg:flex">
-  <ChevronRight className="w-5 h-5 text-white" />
-</button>
+        <button className="absolute -left-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-gray-200 bg-[#F1F2F4] flex items-center justify-center transition hidden lg:flex">
+          <ChevronLeft className="w-5 h-5 text-white" />
+        </button>
+        <button className="absolute -right-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#E6533C] bg-[#E6533C] flex items-center justify-center transition hidden lg:flex">
+          <ChevronRight className="w-5 h-5 text-white" />
+        </button>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <div key={idx} className="relative flex flex-col h-full">
-             <div
-  className="bg-[#F1F4F9] rounded-[32px] p-8 flex flex-col justify-between h-full"
->
-  {/* LOGO */}
-  <img
-    src={project.logo}
-    alt="Project Logo"
-    className="object-contain mb-6"
-    style={{
-      width: project.logoWidth,
-      height: project.logoHeight,
-    }}
-  />
+              <div className="bg-[#F1F4F9] rounded-[32px] p-8 flex flex-col justify-between h-full">
+                {/* LOGO - Clickable */}
+                <img
+                  src={project.logo}
+                  alt="Project Logo"
+                  onClick={() => handleLogoClick(project.websiteUrl)}
+                  className="object-contain mb-6 cursor-pointer hover:opacity-80 transition"
+                  style={{
+                    width: project.logoWidth,
+                    height: project.logoHeight,
+                  }}
+                />
 
-  {/* SUBTITLE */}
-  <h4
-    style={{
-      fontFamily: "Manrope",
-      fontWeight: 600,
-      fontStyle: "SemiBold",
-      fontSize: "24px",
-      lineHeight: "30px",
-      marginBottom: "12px",
-    }}
-  >
-    {project.subtitle}
-  </h4>
+                {/* SUBTITLE */}
+                <h4
+                  style={{
+                    fontFamily: "Manrope",
+                    fontWeight: 600,
+                    fontStyle: "SemiBold",
+                    fontSize: "24px",
+                    lineHeight: "30px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  {project.subtitle}
+                </h4>
 
- {/* DESCRIPTION */}
-<p
-  style={{
-    fontFamily: "Manrope",
-    fontWeight: 400,
-    fontStyle: "Regular",
-    fontSize: "20px",
-    lineHeight: "140%", // qatorlar orasida biroz bo'shliq
-    color: project.descriptionColor,
-    display: "-webkit-box",
-    WebkitLineClamp: 3, // 3 qator
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  }}
->
-  {project.description}
-</p>
+                {/* DESCRIPTION */}
+                <p
+                  style={{
+                    fontFamily: "Manrope",
+                    fontWeight: 400,
+                    fontStyle: "Regular",
+                    fontSize: "20px",
+                    lineHeight: "140%",
+                    color: project.descriptionColor,
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  {project.description}
+                </p>
 
-
-
-
-                {/* Arrow Button */}
-                <div className="absolute top-0 right-0 z-10">
+                {/* Arrow Button - Also Clickable */}
+                <div 
+                  className="absolute top-0 right-0 z-10 cursor-pointer"
+                  onClick={() => handleLogoClick(project.websiteUrl)}
+                >
                   <div
                     className="absolute top-full right-0 w-6 h-6 z-0"
                     style={{ boxShadow: "6px -6px 0 6px white", borderRadius: "0 100% 0 0" }}
@@ -135,7 +148,7 @@ export default function SectionEight({ id }) {
                     style={{ boxShadow: "6px -6px 0 6px white", borderRadius: "0 100% 0 0" }}
                   />
                   <div className="bg-white rounded-bl-[20px] pl-2 pb-2 relative z-10">
-                    <div className="w-9 h-9 bg-[#E6533C] flex items-center justify-center rounded-full">
+                    <div className="w-9 h-9 bg-[#E6533C] flex items-center justify-center rounded-full hover:bg-[#d43f3f] transition">
                       <ArrowUpRight className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -147,6 +160,7 @@ export default function SectionEight({ id }) {
                 {project.catalogs.map((cat, i) => (
                   <div
                     key={i}
+                    onClick={() => handleCatalogClick(cat.pdf, cat.year)}
                     className="flex justify-between items-center bg-[#F8F9FB] p-4 rounded-2xl cursor-pointer hover:bg-gray-200 transition"
                     style={{
                       width: "100%",
@@ -158,7 +172,7 @@ export default function SectionEight({ id }) {
                     }}
                   >
                     <div className="flex items-center gap-2">
-                      <FileText className="text-gray-400 w-5 h-5" /> {/* document.fill icon tiklandi */}
+                      <FileText className="text-gray-400 w-5 h-5" />
                       <span>{cat.label} · {cat.year}</span>
                     </div>
                     <span
