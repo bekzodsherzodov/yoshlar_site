@@ -173,7 +173,7 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     partner_form_title:
       "Hamkorlik uchun murojaat",
     partner_form_subtitle:
-      "Hamkorlik va rasmiy murojaatlar bo‘yicha quyidagi forma orqali bog‘lanishingiz mumkin",
+      "Hamkorlik va rasmiy murojaatlar bo'yicha quyidagi forma orqali bog‘lanishingiz mumkin",
     organization: "Tashkilot nomi",
     name: "Ism va lavozim",
     email: "Elektron pochta",
