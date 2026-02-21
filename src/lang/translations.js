@@ -191,7 +191,7 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     international_environment:
       "Xalqaro muhit",
    site_names_1: "Tadbirkorlik",
-    site_names_2: "ekotizimini bog‘lovchi",
+    site_names_2: "ekotizimini bog'lovchi",
     site_names_3: "bo‘g‘in",
 
     form_success:
