@@ -18,22 +18,22 @@ function SectionT({ id }) {
     if (lang === 'en') {
       return {
         years: "9 year",
-        experience: "Of continuous work"
+        experience: "of Continuous Operation"
       };
     } else if (lang === 'ru') {
       return {
         years: "9 лет",
-        experience: "непрерывной работы"
+        experience: "Непрерывной работы"
       };
     } else if (lang === 'uz') {
       return {
         years: "9 yil",
-        experience: "uzluksiz ish"
+        experience: "Uzluksiz Faoliyat"
       };
     } else if (lang === 'zh') {
       return {
         years: "9年",
-        experience: "持续工作"
+        experience: "持续运营"
       };
     } else {
       return {

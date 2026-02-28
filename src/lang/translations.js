@@ -90,7 +90,7 @@ become_partner_short: "Отп",
 project_imkoniyat_subtitle: "Программа поддержки предпринимательских инициатив",
     project_imkoniyat_desc: "Инструмент расширения возможностей для запуска и развития предпринимательских проектов",
     
-    project_aica_subtitle: "Центр развития искусственного интеллекта",
+    project_aica_subtitle: "Центрально-Азиатская Ассоциация Искусственного Интеллекта",
     project_aica_desc: "Экспертная платформа для развития AI-инициатив, исследований и прикладных решений",
     
     project_unicorns_new_subtitle: "Стартап-сообщество и платформа взаимодействия",
@@ -339,7 +339,7 @@ become_partner_short: "Send",
     project_imkoniyat_subtitle: "Entrepreneurial Initiatives Support Program",
     project_imkoniyat_desc: "A tool for expanding opportunities to launch and develop entrepreneurial projects",
     
-    project_aica_subtitle: "Artificial Intelligence Development Center",
+    project_aica_subtitle: "Central Asia Association of Artificial Intelligence",
     project_aica_desc: "Expert platform for developing AI initiatives, research and applied solutions",
     
     project_unicorns_new_subtitle: "Startup Community and Interaction Platform",
