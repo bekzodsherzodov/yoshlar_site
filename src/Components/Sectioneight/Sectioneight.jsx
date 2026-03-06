@@ -77,12 +77,12 @@ export default function SectionEight({ id }) {
     },
     {
       logo: AICALogo,
-      logoWidth: 156,
+      logoWidth: 140,
       logoHeight: 64,
       subtitle: t("project_aica_subtitle"),
       description: t("project_aica_desc"),
       descriptionColor: "#7F7F7F80",
-      websiteUrl: "https://aica.uz/", // ✅ To'g'ri URL (yoki boshqa kerakli URL)
+      websiteUrl: "https://aica.uz/", 
       catalogs: [
         { year: "2022", label: t("project_catalog"), pdf: "/public/pdfs/2022-katalog_compressed.pdf" }, 
         { year: "2025", label: t("project_catalog"), pdf: null }, 
@@ -90,7 +90,7 @@ export default function SectionEight({ id }) {
     },
     {
       logo: UnicornsLogo,
-      logoWidth: 270,
+      logoWidth: 150,
       logoHeight: 64,
       subtitle: t("project_unicorns_new_subtitle"),
       description: t("project_unicorns_new_desc"),
