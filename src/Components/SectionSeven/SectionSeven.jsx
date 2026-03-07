@@ -9,7 +9,7 @@ function PartnerForm({ id }) {
     organization: "",
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [status, setStatus] = useState(null); // success | error
@@ -27,14 +27,19 @@ function PartnerForm({ id }) {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.organization || !formData.name || !formData.email || !formData.message) {
+    if (
+      !formData.organization ||
+      !formData.name ||
+      !formData.email ||
+      !formData.message
+    ) {
       setStatus("error");
       return;
     }
@@ -47,8 +52,8 @@ function PartnerForm({ id }) {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData)
-        }
+          body: JSON.stringify(formData),
+        },
       );
 
       if (response.ok) {
@@ -121,7 +126,10 @@ function PartnerForm({ id }) {
       {status && (
         <div
           className="fixed top-6 left-1/2 z-50"
-          style={{ transform: "translateX(-50%)", animation: "slideDownFade 0.4s ease-out" }}
+          style={{
+            transform: "translateX(-50%)",
+            animation: "slideDownFade 0.4s ease-out",
+          }}
         >
           <div
             className={`px-6 py-4 rounded-xl shadow-2xl text-white font-medium transition-all duration-300
@@ -134,7 +142,6 @@ function PartnerForm({ id }) {
 
       <section id={id} className="w-full flex justify-center my-24 px-4">
         <div className="flex flex-col lg:flex-row max-w-[1344px] w-full shadow-xl rounded-3xl overflow-hidden bg-[#F1F2F4]">
-
           {/* Form */}
           <div className="p-10 w-full lg:flex-1 flex flex-col gap-6">
             {/* Sarlavha */}
@@ -146,7 +153,7 @@ function PartnerForm({ id }) {
                 fontSize: "40px",
                 lineHeight: "48px",
                 letterSpacing: "0%",
-                color: "#000000"
+                color: "#000000",
               }}
             >
               {t("partner_form_title")}
@@ -161,7 +168,7 @@ function PartnerForm({ id }) {
                 fontSize: "20px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                color: "#7F7F7F80"
+                color: "#7F7F7F80",
               }}
             >
               {t("partner_form_subtitle")}
@@ -202,63 +209,62 @@ function PartnerForm({ id }) {
                 placeholder={t("message")}
                 className="rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] min-h-[150px] bg-[#FFFFFF]"
               />
-<button
-  type="submit"
-  disabled={loading}
-  className="mt-4 flex items-center transition-all duration-300 hover:opacity-90 disabled:opacity-50"
-  style={{
-    background: "transparent",
-    fontFamily: "Manrope, sans-serif",
-    fontWeight: 600,
-    fontSize: "16px",
-    lineHeight: "100%",
-    border: "none",
-    padding: 0,
-    gap: "1px"
-  }}
->
-  {/* Qizil doira ichida qisqa text */}
-  <span
-    className="flex items-center justify-end"
-    style={{
-      background: "#F24B4B",
-      width: "36px",
-      height: "36px",
-      borderRadius: "50%",
-      color: "#000000",
-      fontSize: "16px",
-      fontWeight: 600,
-      fontFamily: "Manrope, sans-serif",
-      flexShrink: 0,
-      paddingRight: "1px",
-      marginRight: "-1px"
-    }}
-  >
-    {loading ? "" : t("button_circle_text")}
-  </span>
+              <button
+                type="submit"
+                disabled={loading}
+                className="mt-4 flex items-center transition-all duration-300 hover:opacity-90 disabled:opacity-50"
+                style={{
+                  background: "transparent",
+                  fontFamily: "Manrope, sans-serif",
+                  fontWeight: 600,
+                  fontSize: "16px",
+                  lineHeight: "100%",
+                  border: "none",
+                  padding: 0,
+                  gap: "1px",
+                }}
+              >
+                {/* Qizil doira ichida qisqa text */}
+                <span
+                  className="flex items-center justify-end"
+                  style={{
+                    background: "#F24B4B",
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    color: "#000000",
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    fontFamily: "Manrope, sans-serif",
+                    flexShrink: 0,
+                    paddingRight: "1px",
+                    marginRight: "-1px",
+                  }}
+                >
+                  {loading ? "" : t("button_circle_text")}
+                </span>
 
-  {/* Asosiy matn */}
-  <span
-    style={{
-      color: "#000000",
-      fontFamily: "Manrope, sans-serif",
-      fontWeight: 600
-    }}
-  >
-    {loading ? t("sending") : t("button_main_text")}
-  </span>
+                {/* Asosiy matn */}
+                <span
+                  style={{
+                    color: "#000000",
+                    fontFamily: "Manrope, sans-serif",
+                    fontWeight: 600,
+                  }}
+                >
+                  {loading ? t("sending") : t("button_main_text")}
+                </span>
 
-  {/* O'qcha */}
-  <FaArrowRightLong
-    style={{
-      width: "18px",
-      height: "18px",
-      color: "#000000",
-      marginLeft: "6px"
-    }}
-  />
-</button>
-
+                {/* O'qcha */}
+                <FaArrowRightLong
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    color: "#000000",
+                    marginLeft: "6px",
+                  }}
+                />
+              </button>
             </form>
           </div>
 

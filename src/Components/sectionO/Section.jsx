@@ -18,15 +18,14 @@ function Section({ id }) {
 
   // ✅ Scroll to PartnerForm function
   const handleScrollToForm = () => {
-    const contactsSection = document.getElementById('contacts');
+    const contactsSection = document.getElementById("contacts");
     if (contactsSection) {
-      contactsSection.scrollIntoView({ behavior: 'smooth' });
+      contactsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <div className="max-w-[1344px] mx-auto mt-6 px-4">
-
       <motion.section
         id={id}
         initial={{ opacity: 0, y: 60 }}
@@ -39,8 +38,8 @@ function Section({ id }) {
 
         {/* H2 */}
         <div className="text-white z-10">
-   <h2
-  className="
+          <h2
+            className="
     text-[28px] md:text-[48px]
     lg:text-[64px]
     font-bold
@@ -53,20 +52,19 @@ function Section({ id }) {
     whitespace-normal
     w-full
   "
-  style={{ fontFamily: "Manrope" }}
->
-  {t("hero_title")}
-</h2>
+            style={{ fontFamily: "Manrope" }}
+          >
+            {t("hero_title")}
+          </h2>
         </div>
 
         {/* BUTTON - ✅ onClick qo'shildi */}
         <div className="mt-8 z-10">
-          <button 
+          <button
             onClick={handleScrollToForm}
-            className="flex items-center relative cursor-pointer hover:opacity-90 transition" 
+            className="flex items-center relative cursor-pointer hover:opacity-90 transition"
             style={{ fontFamily: "Manrope" }}
           >
-            
             {/* Qizil doira */}
             <span
               className="flex items-center justify-center relative z-10"
@@ -143,7 +141,6 @@ function Section({ id }) {
                   height: "34px",
                   borderRadius: "28px",
                   background: "#FFFFFF",
-                
                 }}
               >
                 <div

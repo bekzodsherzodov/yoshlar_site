@@ -24,7 +24,7 @@ export const translations = {
     stats_entrepreneurs: "Предпринимателей в экосистеме",
     stats_investments: "Привлечённых инвестиций",
     stats_partners: "Международные партнёрства",
-
+     
     badge_years: "9 лет",
     badge_experience: "Непрерывной работы",
 
@@ -123,6 +123,8 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     countries: "Davlatlar",
     languages: "Tillar",
 
+
+
     stats_projects: "Amalga oshirilgan loyihalar",
     stats_entrepreneurs: "Ekotizimdagi tadbirkorlar",
     stats_investments: "Jalb qilingan investitsiyalar",
@@ -146,27 +148,27 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     project_ustoz_desc:
       "Sun’iy intellekt asosida shaxsiylashtirilgan ta’limni ta’minlovchi raqamli ekotizim vositasi",
 
-    directions_title_1: "Asosiy yo‘nalishlar",
-    directions_title_2: "faoliyat",
+    directions_title_1: "Tadbirkorlikni rivojlantirish",
+    directions_title_2: "yo'nalishlari",
 
     direction_education_title:
-      "Ta’lim va kompetensiyalarni rivojlantirish",
+      "Ta’lim va kompetensiyalar",
     direction_education_text:
-      "O‘quv dasturlari, biznes-ta’lim va tadbirkorlik ko‘nikmalarini rivojlantirish",
+      "Tadbirkorlik ko'nikmalarini rivojlantirishga qaratilgan ta'lim, va trening   dasturlari",
     direction_acceleration_title:
       "Akseleratsiya dasturlari",
     direction_acceleration_text:
-      "Startaplarni ishga tushirish, o‘sish va investitsiyaga tayyorlash bosqichlarida qo‘llab-quvvatlash",
+      "Startaplarni turli bosqichlarda qo'llab-quvvatlash, va investitsiyaga tayyorlash",
     direction_investments_title:
       "Investitsiyalar va moliyalashtirish",
     direction_investments_text:
-      "Venchur investitsiyalar, grantlar, imtiyozli kreditlar va moliyaviy vositalar",
+      "lnverstitsiya vositalari grantlar va moliyaviy qo'llab-quvvatlash mexanizmlariga kirish",
     direction_partnerships_title:
       "Hamkorlik va o‘zaro aloqalar",
     direction_partnerships_text:
       "Banklar, fondlar, davlat va xalqaro tashkilotlar bilan hamkorlik",
     direction_analytics_title:
-      "Analitika va muhitni rivojlantirish",
+      "Tahlil va ekotizimini rivojilantirish",
     direction_analytics_text:
       "Tadqiqotlar, tahlillar va barqaror tadbirkorlik muhitini shakllantirish",
 
@@ -191,8 +193,8 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     international_environment:
       "Xalqaro muhit",
    site_names_1: "Tadbirkorlik",
-    site_names_2: "ekotizimini bog'lovchi",
-    site_names_3: "bo‘g‘in",
+    site_names_2: "ekotizimini ",
+    site_names_3: "bog'lovchi bo‘g‘in",
 
     form_success:
       "Ma'lumotlaringiz muvaffaqiyatli yuborildi",
