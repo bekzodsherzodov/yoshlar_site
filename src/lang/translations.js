@@ -466,7 +466,6 @@ become_partner_short: "Send",
       "become_partner_full": "发送请求",
   "become_partner_short": "发",
 
-
   project_imkoniyat_subtitle: "创业倡议支持计划",
     project_imkoniyat_desc: "扩大创业项目启动和发展机会的工具",
     
@@ -475,8 +474,6 @@ become_partner_short: "Send",
     
     project_unicorns_new_subtitle: "初创企业社区和互动平台",
     project_unicorns_new_desc: "初创企业、投资者和专家之间的交流环境",
-
-
 
     button_circle_text: "提交",
     button_main_text: "请求",
