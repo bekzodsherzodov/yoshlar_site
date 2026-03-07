@@ -6,39 +6,73 @@ import { useLang } from "../../lang/LanguageContext";
 function SectionT({ id }) {
   const { t, lang } = useLang();
 
-  const stats = [
-    { value: "50+", label: t("stats_projects") },
-    { value: "500 000+", label: t("stats_entrepreneurs") },
-    { value: "$8,5 млн", label: t("stats_investments") },
-    { value: "20+", label: t("stats_partners") },
-  ];
+  // Stats tilga qarab
+  const getStats = () => {
+    if (lang === "en") {
+      return [
+        { value: "50+", label: t("stats_projects") },
+        { value: "500 000+", label: t("stats_entrepreneurs") },
+        { value: "$8.5 m", label: t("stats_investments") },
+        { value: "20+ Countries", label: t("stats_partners") },
+      ];
+    }
+
+    if (lang === "ru") {
+      return [
+        { value: "50+", label: t("stats_projects") },
+        { value: "500 000+", label: t("stats_entrepreneurs") },
+        { value: "$8,5 млн", label: t("stats_investments") },
+        { value: "20+  страна", label: t("stats_partners") },
+      ];
+    }
+
+    if (lang === "uz") {
+      return [
+        { value: "50+", label: t("stats_projects") },
+        { value: "500 000+", label: t("stats_entrepreneurs") },
+        { value: "$8,5 mln", label: t("stats_investments") },
+        { value: "20+ mamlakat", label: t("stats_partners") },
+      ];
+    }
+
+    if (lang === "zh") {
+      return [
+        { value: "50+", label: t("stats_projects") },
+        { value: "500 000+", label: t("stats_entrepreneurs") },
+        { value: "$8.5 m", label: t("stats_investments") },
+        { value: "20+ 个国家", label: t("stats_partners") },
+      ];
+    }
+  };
+
+  const stats = getStats();
 
   // Badge text strukturasi tilga qarab
   const getBadgeText = () => {
-    if (lang === 'en') {
+    if (lang === "en") {
       return {
         years: "9 year",
-        experience: "of Continuous Operation"
+        experience: "of Continuous Operation",
       };
-    } else if (lang === 'ru') {
+    } else if (lang === "ru") {
       return {
         years: "9 лет",
-        experience: "Непрерывной работы"
+        experience: "Непрерывной работы",
       };
-    } else if (lang === 'uz') {
+    } else if (lang === "uz") {
       return {
         years: "9 yil",
-        experience: "Uzluksiz Faoliyat"
+        experience: "Uzluksiz Faoliyat",
       };
-    } else if (lang === 'zh') {
+    } else if (lang === "zh") {
       return {
         years: "9年",
-        experience: "持续运营"
+        experience: "持续运营",
       };
     } else {
       return {
         years: t("badge_years"),
-        experience: t("badge_experience")
+        experience: t("badge_experience"),
       };
     }
   };
@@ -51,51 +85,25 @@ function SectionT({ id }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="
-        w-full 
-        max-w-[90%] sm:max-w-[89%] md:max-w-[1320px] 
-        mx-auto mt-6 bg-[#252422] rounded-[40px] 
-        relative overflow-hidden text-white
-        py-10
-      "
+      className="w-full max-w-[90%] sm:max-w-[89%] md:max-w-[1320px] mx-auto mt-6 bg-[#252422] rounded-[40px] relative overflow-hidden text-white py-10"
     >
-      {/* Background */}
       <img
         src={bg}
         alt=""
         className="absolute right-0 top-1/2 -translate-y-1/2 opacity-40 pointer-events-none select-none"
       />
 
-      {/* FLEX CONTAINER */}
-      <div className="
-        relative z-10 
-        flex flex-col lg:flex-row
-        items-center justify-center lg:justify-start
-        px-6 md:px-12 py-10 gap-10
-      ">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:justify-start px-6 md:px-12 py-10 gap-10">
 
         {/* Stats */}
-        <div className="
-          grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 
-          gap-x-6 sm:gap-x-8 lg:gap-x-10
-          gap-y-6 sm:gap-y-8 lg:gap-y-8
-          w-full lg:w-auto
-          justify-items-center lg:justify-items-start
-        ">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-x-6 sm:gap-x-8 lg:gap-x-10 gap-y-6 sm:gap-y-8 lg:gap-y-8 w-full lg:w-auto justify-items-center lg:justify-items-start">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center lg:text-left mt-3 mb-3">
-              {/* Number */}
-              <h2
-                className="font-bold w-full text-[32px] sm:text-[40px] md:text-[48px] leading-[100%]"
-                style={{ fontFamily: "Manrope", fontWeight: 700 }}
-              >
+              <h2 className="font-bold w-full text-[32px] sm:text-[40px] md:text-[48px] leading-[100%]">
                 {stat.value}
               </h2>
-              {/* Label */}
-              <p
-                className="mt-2 sm:mt-3 text-gray-300 w-full text-[14px] sm:text-[16px] md:text-[20px] leading-[100%]"
-                style={{ fontFamily: "Manrope", fontWeight: 400 }}
-              >
+
+              <p className="mt-2 sm:mt-3 text-gray-300 w-full text-[14px] sm:text-[16px] md:text-[20px] leading-[100%]">
                 {stat.label}
               </p>
             </div>
@@ -104,29 +112,18 @@ function SectionT({ id }) {
 
         {/* 🔴 Qizil doira */}
         <div
-          className="
-            flex flex-col items-center justify-center text-center shadow-2xl
-            relative
-            w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[270px] md:h-[270px]
-            rounded-[100px] sm:rounded-[110px] md:rounded-[131px]
-            left-0 md:left-[150px]
-          "
+          className="flex flex-col items-center justify-center text-center shadow-2xl relative w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[270px] md:h-[270px] rounded-[100px] sm:rounded-[110px] md:rounded-[131px] left-0 md:left-[150px]"
           style={{
             backgroundColor: "#F24B4B",
             padding: "40px 20px",
             gap: "8px",
           }}
         >
-          <span
-            className="text-[48px] sm:text-[56px] md:text-[64px] font-bold leading-[100%] text-center"
-            style={{ fontFamily: "Manrope", fontWeight: 700 }}
-          >
+          <span className="text-[48px] sm:text-[56px] md:text-[64px] font-bold leading-[100%] text-center">
             {badgeText.years}
           </span>
-          <span
-            className="text-[16px] sm:text-[18px] md:text-[20px] font-normal leading-[120%] text-center max-w-[90%]"
-            style={{ fontFamily: "Manrope", fontWeight: 400 }}
-          >
+
+          <span className="text-[16px] sm:text-[18px] md:text-[20px] pt-[20px] font-normal leading-[120%] text-center max-w-[90%]">
             {badgeText.experience}
           </span>
         </div>
