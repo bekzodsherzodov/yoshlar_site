@@ -138,15 +138,15 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     project_catalog: "Loyihalar katalogi",
     project_unicorns_subtitle: "Xalqaro startap-akselerator",
     project_unicorns_desc:
-      "Startaplarni rivojlantirish va investitsiyaga tayyorlashga qaratilgan ekotizimning asosiy akseleratsiya dasturi",
+      "Startaplarning o‘sishi va investitsiyaga tayyorligini oshirishga qaratilgan ekotizimning muhim dasturi",
     project_university_subtitle:
       "Tadbirkorlar uchun ta’lim platformasi",
     project_university_desc:
-      "Tadbirkorlarni tayyorlash va biznes ko‘nikmalarini rivojlantirishga mo‘ljallangan tizimli ta’lim muhiti",
+      "Tadbirkorlarni tayyorlash va biznes kompetensiyalarini rivojlantirishga mo‘ljallangan kompleks ta’lim muhiti",
     project_ustoz_subtitle:
       "Ta’lim va mentorlik uchun AI platforma",
     project_ustoz_desc:
-      "Sun’iy intellekt asosida shaxsiylashtirilgan ta’limni ta’minlovchi raqamli ekotizim vositasi",
+      "Shaxsiylashtirilgan ta’lim va mentorlikni qo‘llab-quvvatlovchi raqamli platforma",
 
     directions_title_1: "Tadbirkorlikni rivojlantirish",
     directions_title_2: "yo'nalishlari",
