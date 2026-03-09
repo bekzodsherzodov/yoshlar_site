@@ -209,64 +209,56 @@ function PartnerForm({ id }) {
                 placeholder={t("message")}
                 className="rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] min-h-[150px] bg-[#FFFFFF]"
               />
-              <button
-                type="submit"
-                disabled={loading}
-                className="mt-4 flex items-center transition-all duration-300 hover:opacity-90 disabled:opacity-50"
-                style={{
-                  background: "transparent",
-                  fontFamily: "Manrope, sans-serif",
-                  fontWeight: 600,
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  border: "none",
-                  padding: 0,
-                  gap: "1px",
-                }}
-              >
-                {/* Qizil doira ichida qisqa text */}
-                <span
-                  className="flex items-center  justify-end"
-                  style={{
-                    background: "#F24B4B",
-                    width: "36px",
-                    height: "36px",
-                    borderRadius: "50%",
-                    color: "#000000",
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    fontFamily: "Manrope, sans-serif",
-                    flexShrink: 0,
-                    paddingRight: "1px",
-                    marginRight: "-1px",
-                  
-                  }}
-                >
-                 
-                </span>
+<button
+  type="submit"
+  disabled={loading}
+  className="mt-4 relative flex items-center hover:opacity-90 disabled:opacity-50"
+  style={{
+    background: "transparent",
+    fontFamily: "Manrope, sans-serif",
+    fontWeight: 600,
+    fontSize: "16px",
+    border: "none",
+    padding: 0,
+  }}
+>
+  {/* Qizil doira */}
+  <span
+    style={{
+      position: "absolute",
+      left: "-12px",
+      width: "36px",
+      height: "36px",
+      borderRadius: "50%",
+      background: "#F24B4B",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 1,
+    }}
+  />
 
-                {/* Asosiy matn */}
-                <span className="pr-[10px]"
-                  style={{
-                    color: "#000000",
-                    fontFamily: "Manrope, sans-serif",
-                    fontWeight: 600,
-                    
-                  }}
-                >
-                  {loading ? t("sending") : t("button_main_text")}
-                </span>
+  {/* Button text */}
+  <span
+    style={{
+      paddingLeft: "3px",
+      color: "#000",
+      position: "relative",
+      zIndex: 2,
+    }}
+  >
+    {loading ? t("sending") : t("button_main_text")}
+  </span>
 
-                {/* O'qcha */}
-                <FaArrowRightLong
-                  style={{
-                    width: "18px",
-                    height: "18px",
-                    color: "#000000",
-                    marginLeft: "6px",
-                  }}
-                />
-              </button>
+  <FaArrowRightLong
+    style={{
+      width: "18px",
+      height: "18px",
+      color: "#000",
+      marginLeft: "8px",
+    }}
+  />
+</button>
             </form>
           </div>
 
