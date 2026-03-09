@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, FileText } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  FileText,
+} from "lucide-react";
 import { useLang } from "../../lang/LanguageContext";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-// Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import Group28 from "../../assets/img/Group_28.png";
 import UniversityLogo from "../../assets/img/Yoshtadbirkor_University_Logo.png";
@@ -32,8 +36,8 @@ export default function SectionEight({ id }) {
       descriptionColor: "#7F7F7F80",
       websiteUrl: "https://unicorns.uz/ru",
       catalogs: [
-        { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" }, 
-        { year: "2023", label: t("project_catalog"), pdf: "/public/pdfs/2023-katalog (1).pdf" }, 
+        { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" },
+        { year: "2023", label: t("project_catalog"), pdf: "/public/pdfs/2023-katalog (1).pdf" },
       ],
     },
     {
@@ -46,7 +50,7 @@ export default function SectionEight({ id }) {
       websiteUrl: "https://yoshtadbirkor.uz/university",
       catalogs: [
         { year: "2021", label: t("project_catalog"), pdf: "/pdfs/2021-katalog_compressed.pdf" },
-        { year: "2024", label: t("project_catalog"), pdf: null }, 
+        { year: "2024", label: t("project_catalog"), pdf: null },
       ],
     },
     {
@@ -58,8 +62,8 @@ export default function SectionEight({ id }) {
       descriptionColor: "#7F7F7F80",
       websiteUrl: "https://www.ustoz.ai/",
       catalogs: [
-        { year: "2022", label: t("project_catalog"), pdf: "/pdfs/2022-katalog_compressed.pdf" }, 
-        { year: "2025", label: t("project_catalog"), pdf: null }, 
+        { year: "2022", label: t("project_catalog"), pdf: "/pdfs/2022-katalog_compressed.pdf" },
+        { year: "2025", label: t("project_catalog"), pdf: null },
       ],
     },
     {
@@ -72,7 +76,7 @@ export default function SectionEight({ id }) {
       websiteUrl: "https://yoshtadbirkor.uz/imkoniyat",
       catalogs: [
         { year: "2021", label: t("project_catalog"), pdf: "/public/pdfs/2021-katalog_compressed.pdf" },
-        { year: "2024", label: t("project_catalog"), pdf: null }, 
+        { year: "2024", label: t("project_catalog"), pdf: null },
       ],
     },
     {
@@ -82,10 +86,10 @@ export default function SectionEight({ id }) {
       subtitle: t("project_aica_subtitle"),
       description: t("project_aica_desc"),
       descriptionColor: "#7F7F7F80",
-      websiteUrl: "https://aica.uz/", 
+      websiteUrl: "https://aica.uz/",
       catalogs: [
-        { year: "2022", label: t("project_catalog"), pdf: "/public/pdfs/2022-katalog_compressed.pdf" }, 
-        { year: "2025", label: t("project_catalog"), pdf: null }, 
+        { year: "2022", label: t("project_catalog"), pdf: "/public/pdfs/2022-katalog_compressed.pdf" },
+        { year: "2025", label: t("project_catalog"), pdf: null },
       ],
     },
     {
@@ -97,60 +101,59 @@ export default function SectionEight({ id }) {
       descriptionColor: "#7F7F7F80",
       websiteUrl: "https://unicorns.uz/",
       catalogs: [
-        { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" }, 
-        { year: "2023", label: t("project_catalog"), pdf: "/public/pdfs/2023-katalog (1).pdf" }, 
+        { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" },
+        { year: "2023", label: t("project_catalog"), pdf: "/public/pdfs/2023-katalog (1).pdf" },
       ],
     },
   ];
 
   const handleCatalogClick = (pdf, year) => {
     if (pdf) {
-      window.open(pdf, '_blank');
+      window.open(pdf, "_blank");
     } else {
       alert(`${year} yil uchun katalog hozircha mavjud emas`);
     }
   };
 
   const handleLogoClick = (url) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
-  const handlePrev = () => {
-    if (swiper) swiper.slidePrev();
-  };
-
-  const handleNext = () => {
-    if (swiper) swiper.slideNext();
-  };
+  const handlePrev = () => { if (swiper) swiper.slidePrev(); };
+  const handleNext = () => { if (swiper) swiper.slideNext(); };
 
   return (
-    <section id={id} className="py-16 px-4 bg-white font-sans max-w-[1344px] mx-auto">
+    <section
+      id={id}
+      className="py-16 px-4 bg-white font-sans max-w-[1344px] mx-auto"
+    >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         {t("projects_title_1")}{" "}
         <span className="text-[#E6533C]">{t("projects_title_2")}</span>
       </h2>
 
-      <div className="relative">
-        {/* Custom Navigation Buttons */}
-        <button 
+      <div className="relative px-6 md:px-8">
+        {/* Prev Button */}
+        <button
           onClick={handlePrev}
           disabled={isBeginning}
-          className={`absolute -left-2 md:-left-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition
-            ${isBeginning 
-              ? 'border-gray-200 bg-[#F1F2F4] cursor-not-allowed opacity-50' 
-              : 'border-[#E6533C] bg-[#E6533C] hover:bg-[#d43f3f] cursor-pointer'
+          className={`absolute left-0 top-[40%] -translate-y-1/2 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition
+            ${isBeginning
+              ? "border-gray-200 bg-[#F1F2F4] cursor-not-allowed opacity-50"
+              : "border-[#E6533C] bg-[#E6533C] hover:bg-[#d43f3f] cursor-pointer"
             }`}
         >
           <ChevronLeft className="w-5 h-5 text-white" />
         </button>
-        
-        <button 
+
+        {/* Next Button */}
+        <button
           onClick={handleNext}
           disabled={isEnd}
-          className={`absolute -right-2 md:-right-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition
-            ${isEnd 
-              ? 'border-gray-200 bg-[#F1F2F4] cursor-not-allowed opacity-50' 
-              : 'border-[#E6533C] bg-[#E6533C] hover:bg-[#d43f3f] cursor-pointer'
+          className={`absolute right-0 top-[40%] -translate-y-1/2 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition
+            ${isEnd
+              ? "border-gray-200 bg-[#F1F2F4] cursor-not-allowed opacity-50"
+              : "border-[#E6533C] bg-[#E6533C] hover:bg-[#d43f3f] cursor-pointer"
             }`}
         >
           <ChevronRight className="w-5 h-5 text-white" />
@@ -161,51 +164,45 @@ export default function SectionEight({ id }) {
           modules={[Navigation, Pagination]}
           spaceBetween={24}
           slidesPerView={1}
-          onSwiper={setSwiper}
-          onSlideChange={(swiper) => {
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
+          onSwiper={(s) => {
+            setSwiper(s);
+            setIsBeginning(s.isBeginning);
+            setIsEnd(s.isEnd);
+          }}
+          onSlideChange={(s) => {
+            setIsBeginning(s.isBeginning);
+            setIsEnd(s.isEnd);
           }}
           pagination={{
             clickable: true,
             dynamicBullets: true,
+            el: ".custom-pagination",
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 },
           }}
-          className="pb-12 px-2 md:px-0"
         >
           {projects.map((project, idx) => (
-            <SwiperSlide key={idx} className="h-auto">
-              <div className="flex flex-col h-full">
-                {/* Main Card - Fixed Height */}
-                <div className="bg-[#F1F4F9] rounded-[32px] p-8 relative" style={{ minHeight: '400px' }}>
-                  {/* LOGO - Fixed Height Container */}
-                  <div 
-                    className="mb-6 flex items-center"
-                    style={{ height: '64px' }}
-                  >
+            <SwiperSlide key={idx} style={{ display: "flex", height: "auto" }}>
+              <div className="flex flex-col w-full">
+                {/* Main Card */}
+                <div
+                  className="bg-[#F1F4F9] rounded-[32px] p-8 relative flex-1"
+                  style={{ minHeight: "400px" }}
+                >
+                  {/* Logo */}
+                  <div className="mb-6 flex items-center" style={{ height: "64px" }}>
                     <img
                       src={project.logo}
                       alt="Project Logo"
                       onClick={() => handleLogoClick(project.websiteUrl)}
                       className="object-contain transition cursor-pointer hover:opacity-80"
-                      style={{
-                        width: project.logoWidth,
-                        height: project.logoHeight,
-                        maxHeight: '64px',
-                      }}
+                      style={{ width: project.logoWidth, height: project.logoHeight, maxHeight: "64px" }}
                     />
                   </div>
 
-                  {/* SUBTITLE - Fixed Height */}
+                  {/* Subtitle */}
                   <h4
                     className="line-clamp-2"
                     style={{
@@ -220,7 +217,7 @@ export default function SectionEight({ id }) {
                     {project.subtitle}
                   </h4>
 
-                  {/* DESCRIPTION - Fixed 3 lines */}
+                  {/* Description */}
                   <p
                     className="line-clamp-3"
                     style={{
@@ -235,8 +232,8 @@ export default function SectionEight({ id }) {
                     {project.description}
                   </p>
 
-                  {/* Arrow Button - ✅ BARCHA CARDLARDA KO'RINADI */}
-                  <div 
+                  {/* Arrow Button */}
+                  <div
                     className="absolute top-0 right-0 z-10 cursor-pointer"
                     onClick={() => handleLogoClick(project.websiteUrl)}
                   >
@@ -256,8 +253,8 @@ export default function SectionEight({ id }) {
                   </div>
                 </div>
 
-                {/* Catalogs - Fixed Height */}
-                <div className="mt-4 space-y-3" style={{ minHeight: '136px' }}>
+                {/* Catalogs */}
+                <div className="mt-4 space-y-3" style={{ minHeight: "136px" }}>
                   {project.catalogs.map((cat, i) => (
                     <div
                       key={i}
@@ -298,28 +295,36 @@ export default function SectionEight({ id }) {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Pagination - swiper tashqarisida, alohida */}
+        <div className="custom-pagination flex justify-center mt-6" />
       </div>
 
-      {/* Custom Pagination Styling */}
       <style jsx>{`
-        .swiper-pagination-bullet {
-          background: #E6533C;
-          opacity: 0.5;
+        .custom-pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          margin-top: 24px;
         }
-        .swiper-pagination-bullet-active {
+        :global(.custom-pagination .swiper-pagination-bullet) {
+          background: #e6533c;
+          opacity: 0.4;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          display: inline-block;
+          cursor: pointer;
+        }
+        :global(.custom-pagination .swiper-pagination-bullet-active) {
           opacity: 1;
-          background: #E6533C;
+          background: #e6533c;
+          width: 24px;
+          border-radius: 4px;
         }
-        
-        /* Mobile swiper fix */
-        .swiper-slide {
+        :global(.swiper-slide) {
           height: auto !important;
-        }
-        
-        /* Pagination mobile visibility */
-        .swiper-pagination {
-          position: relative !important;
-          margin-top: 20px !important;
         }
       `}</style>
     </section>

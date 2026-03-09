@@ -116,7 +116,7 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     about_text:
       "Oʻzbekiston Yoshlar tadbirkorligini qoʻllab-quvvatlash markazi tadbirkorlar, startaplar, taʼlim muassasalari, investitsiya tashkilotlari, davlat organlari va xalqaro hamkorlar oʻrtasidagi institutsional hamkorlikni taʼminlaydi hamda tadbirkorlik ekotizimining barqaror rivojlanishiga xizmat qiladi.",
     footer_platform_text:
-      "Tadbirkorlik ekotizimini rivojlantirishning institutsional platformasi",
+      "Tezkor masalalar bo'yicha telefon orqali bog'lanishni tavsiya etamiz",
     projects: "Loyihalar",
     entrepreneurs: "Tadbirkorlar",
     investments: "Investitsiyalar",
@@ -138,15 +138,15 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     project_catalog: "Loyihalar katalogi",
     project_unicorns_subtitle: "Xalqaro startap-akselerator",
     project_unicorns_desc:
-      "Startaplarni rivojlantirish va investitsiyaga tayyorlashga qaratilgan ekotizimning asosiy akseleratsiya dasturi",
+      "Startaplarning o‘sishi va investitsiyaga tayyorligini oshirishga qaratilgan ekotizimning muhim dasturi",
     project_university_subtitle:
       "Tadbirkorlar uchun ta’lim platformasi",
     project_university_desc:
-      "Tadbirkorlarni tayyorlash va biznes ko‘nikmalarini rivojlantirishga mo‘ljallangan tizimli ta’lim muhiti",
+      "Tadbirkorlarni tayyorlash va biznes kompetensiyalarini rivojlantirishga mo‘ljallangan kompleks ta’lim muhiti",
     project_ustoz_subtitle:
       "Ta’lim va mentorlik uchun AI platforma",
     project_ustoz_desc:
-      "Sun’iy intellekt asosida shaxsiylashtirilgan ta’limni ta’minlovchi raqamli ekotizim vositasi",
+      "Shaxsiylashtirilgan ta’lim va mentorlikni qo‘llab-quvvatlovchi raqamli platforma",
 
     directions_title_1: "Tadbirkorlikni rivojlantirish",
     directions_title_2: "yo'nalishlari",
@@ -173,7 +173,7 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
       "Tadqiqotlar, tahlillar va barqaror tadbirkorlik muhitini shakllantirish",
 
     partner_form_title:
-      "Hamkorlik uchun murojaat",
+      "Hamkorlik bo‘yicha murojaat",
     partner_form_subtitle:
       "Hamkorlik va rasmiy murojaatlar bo'yicha quyidagi forma orqali bog'lanishingiz mumkin",
     organization: "Tashkilot nomi",
@@ -182,8 +182,8 @@ project_imkoniyat_subtitle: "Программа поддержки предпр�
     message: "Murojaat maqsadini yoki hamkorlik formatini qisqacha tavsiflang",
     become_partner: "Murojaat yuborish",
 
-    partnership_title: "Hamkorliklar",
-    partnership_subtitle: "va hamkorlik",
+    partnership_title: "Hamkorlik va strategik ",
+    partnership_subtitle: "sherikliklar",
     startup_initiatives: "Startap tashabbuslari",
     investment_institutions:
       "Investitsiya institutlari",
@@ -217,8 +217,8 @@ become_partner_short: "Yub",
     project_unicorns_new_desc: "Startaplar, investorlar va ekspertlar o'zaro muloqoti uchun kommunikatsiya muhiti",
 
 
-      button_circle_text: "Yubo", // Doira ichidagi qisqa text
-    button_main_text: "rish",
+     // Doira ichidagi qisqa text
+    button_main_text: "Murojaat yuborish", // Asosiy matn
   },
 
   en: {

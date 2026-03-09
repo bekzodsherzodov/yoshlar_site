@@ -159,7 +159,7 @@ const Footer = () => {
                   color: '#000000'
                 }}
               >
-                {t("contacts")}
+                {/* {t("contacts")} */}
               </li>
             </ul>
           </div>
