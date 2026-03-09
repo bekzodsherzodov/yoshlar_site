@@ -60,9 +60,9 @@ function SectionSix({ id }) {
               color: '#FFFFFF'
             }}
           >
-            <span style={{ color: '#F24B4B' }}>{t("partnership_title")}</span>
+            <span >{t("partnership_title")}</span>
             <br />
-            {t("partnership_subtitle")}
+           <span style={{ color: '#F24B4B' }}>{t("partnership_subtitle")}</span>
           </h2>
         </div>
 

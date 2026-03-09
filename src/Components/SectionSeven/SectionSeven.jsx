@@ -226,7 +226,7 @@ function PartnerForm({ id }) {
               >
                 {/* Qizil doira ichida qisqa text */}
                 <span
-                  className="flex items-center justify-end"
+                  className="flex items-center  justify-end"
                   style={{
                     background: "#F24B4B",
                     width: "36px",
@@ -239,17 +239,19 @@ function PartnerForm({ id }) {
                     flexShrink: 0,
                     paddingRight: "1px",
                     marginRight: "-1px",
+                  
                   }}
                 >
-                  {loading ? "" : t("button_circle_text")}
+                 
                 </span>
 
                 {/* Asosiy matn */}
-                <span
+                <span className="pr-[10px]"
                   style={{
                     color: "#000000",
                     fontFamily: "Manrope, sans-serif",
                     fontWeight: 600,
+                    
                   }}
                 >
                   {loading ? t("sending") : t("button_main_text")}
