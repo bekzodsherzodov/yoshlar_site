@@ -9,10 +9,11 @@ function PartnerForm({ id }) {
     organization: "",
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
-  const [status, setStatus] = useState(null); // success | error
+  const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -38,6 +39,7 @@ function PartnerForm({ id }) {
       !formData.organization ||
       !formData.name ||
       !formData.email ||
+      !formData.phone ||
       !formData.message
     ) {
       setStatus("error");
@@ -53,12 +55,19 @@ function PartnerForm({ id }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
-        },
+        }
       );
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ organization: "", name: "", email: "", message: "" });
+
+        setFormData({
+          organization: "",
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
       } else {
         setStatus("error");
       }
@@ -71,7 +80,6 @@ function PartnerForm({ id }) {
 
   return (
     <>
-      {/* 🔥 Modal Animation CSS inside component */}
       <style>
         {`
           @keyframes slideDownFade {
@@ -79,41 +87,33 @@ function PartnerForm({ id }) {
             to { opacity: 1; transform: translate(-50%, 0); }
           }
 
-          /* Placeholder style */
           input::placeholder,
           textarea::placeholder {
             color: #7F7F7F80;
             font-family: Manrope;
-            font-weight: 400;
-            font-style: Regular;
             font-size: 20px;
-            line-height: 100%;
-            letter-spacing: 0%;
           }
 
-          /* Input and textarea text color - QORA RANG */
           input, textarea {
             color: #000000;
           }
 
-          /* Sarlavha responsive width */
           .partner-form-title {
             width: 100%;
             max-width: 604px;
           }
-          
+
           @media (max-width: 767px) {
             .partner-form-title {
               max-width: 320px;
             }
           }
 
-          /* Subtitle responsive width */
           .partner-form-subtitle {
             width: 100%;
             max-width: 604px;
           }
-          
+
           @media (max-width: 767px) {
             .partner-form-subtitle {
               max-width: 320px;
@@ -122,7 +122,6 @@ function PartnerForm({ id }) {
         `}
       </style>
 
-      {/* 🔥 TOP MODAL */}
       {status && (
         <div
           className="fixed top-6 left-1/2 z-50"
@@ -132,7 +131,7 @@ function PartnerForm({ id }) {
           }}
         >
           <div
-            className={`px-6 py-4 rounded-xl shadow-2xl text-white font-medium transition-all duration-300
+            className={`px-6 py-4 rounded-xl shadow-2xl text-white font-medium
               ${status === "success" ? "bg-green-500" : "bg-red-500"}`}
           >
             {status === "success" ? t("form_success") : t("form_error")}
@@ -142,9 +141,10 @@ function PartnerForm({ id }) {
 
       <section id={id} className="w-full flex justify-center my-24 px-4">
         <div className="flex flex-col lg:flex-row max-w-[1344px] w-full shadow-xl rounded-3xl overflow-hidden bg-[#F1F2F4]">
-          {/* Form */}
+
+          {/* FORM */}
           <div className="p-10 w-full lg:flex-1 flex flex-col gap-6">
-            {/* Sarlavha */}
+
             <h2
               className="partner-form-title"
               style={{
@@ -152,22 +152,18 @@ function PartnerForm({ id }) {
                 fontWeight: 700,
                 fontSize: "40px",
                 lineHeight: "48px",
-                letterSpacing: "0%",
                 color: "#000000",
               }}
             >
               {t("partner_form_title")}
             </h2>
 
-            {/* Subtitle */}
             <p
               className="partner-form-subtitle"
               style={{
                 fontFamily: "Manrope",
                 fontWeight: 400,
                 fontSize: "20px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
                 color: "#7F7F7F80",
               }}
             >
@@ -175,13 +171,14 @@ function PartnerForm({ id }) {
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+
               <input
                 type="text"
                 name="organization"
                 value={formData.organization}
                 onChange={handleChange}
                 placeholder={t("organization")}
-                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-[#FFFFFF]"
+                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-white"
               />
 
               <input
@@ -190,7 +187,7 @@ function PartnerForm({ id }) {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder={t("name")}
-                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-[#FFFFFF]"
+                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-white"
               />
 
               <input
@@ -199,7 +196,17 @@ function PartnerForm({ id }) {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder={t("email")}
-                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-[#FFFFFF]"
+                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-white"
+              />
+
+              {/* TELEFON INPUT */}
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder={t("phone")}
+                className="rounded-full p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] bg-white"
               />
 
               <textarea
@@ -207,62 +214,61 @@ function PartnerForm({ id }) {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={t("message")}
-                className="rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] min-h-[150px] bg-[#FFFFFF]"
+                className="rounded-2xl p-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#F24B4B] min-h-[150px] bg-white"
               />
-<button
-  type="submit"
-  disabled={loading}
-  className="mt-4 relative flex items-center hover:opacity-90 disabled:opacity-50"
-  style={{
-    background: "transparent",
-    fontFamily: "Manrope, sans-serif",
-    fontWeight: 600,
-    fontSize: "16px",
-    border: "none",
-    padding: 0,
-  }}
->
-  {/* Qizil doira */}
-  <span
-    style={{
-      position: "absolute",
-      left: "-12px",
-      width: "36px",
-      height: "36px",
-      borderRadius: "50%",
-      background: "#F24B4B",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      zIndex: 1,
-    }}
-  />
 
-  {/* Button text */}
-  <span
-    style={{
-      paddingLeft: "3px",
-      color: "#000",
-      position: "relative",
-      zIndex: 2,
-    }}
-  >
-    {loading ? t("sending") : t("button_main_text")}
-  </span>
+              <button
+                type="submit"
+                disabled={loading}
+                className="mt-4 relative flex items-center hover:opacity-90 disabled:opacity-50"
+                style={{
+                  background: "transparent",
+                  fontFamily: "Manrope",
+                  fontWeight: 600,
+                  fontSize: "16px",
+                  border: "none",
+                  padding: 0,
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    left: "-12px",
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background: "#F24B4B",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    zIndex: 1,
+                  }}
+                />
 
-  <FaArrowRightLong
-    style={{
-      width: "18px",
-      height: "18px",
-      color: "#000",
-      marginLeft: "8px",
-    }}
-  />
-</button>
+                <span
+                  style={{
+                    paddingLeft: "3px",
+                    color: "#000",
+                    position: "relative",
+                    zIndex: 2,
+                  }}
+                >
+                  {loading ? t("sending") : t("button_main_text")}
+                </span>
+
+                <FaArrowRightLong
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    color: "#000",
+                    marginLeft: "8px",
+                  }}
+                />
+              </button>
             </form>
           </div>
 
-          {/* Map */}
+          {/* MAP */}
           <div className="w-full lg:flex-1 h-[400px] lg:h-auto">
             <iframe
               className="w-full h-full"
@@ -271,6 +277,7 @@ function PartnerForm({ id }) {
               allowFullScreen
             />
           </div>
+
         </div>
       </section>
     </>
