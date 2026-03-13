@@ -269,15 +269,17 @@ function PartnerForm({ id }) {
           </div>
 
           {/* MAP */}
-          <div className="w-full lg:flex-1 h-[400px] lg:h-auto">
-            <iframe
-              className="w-full h-full"
-              src="https://www.google.com/maps?q=41.285680,69.203464&z=15&output=embed"
-              loading="lazy"
-              allowFullScreen
-            />
-          </div>
-
+{/* MAP */}
+{/* MAP */}
+<div className="w-full lg:flex-1 h-[400px] lg:h-auto">
+  <iframe
+    className="w-full h-full"
+    src="https://yandex.com/map-widget/v1/?ll=69.21177904332947%2C41.29242014242509&z=18&pt=69.21177904332947,41.29242014242509,pm2rdl"
+    loading="lazy"
+    frameBorder="0"
+    allowFullScreen
+  ></iframe>
+</div>
         </div>
       </section>
     </>
