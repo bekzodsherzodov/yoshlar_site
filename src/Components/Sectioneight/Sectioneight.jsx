@@ -37,7 +37,7 @@ export default function SectionEight({ id }) {
       websiteUrl: "https://unicorns.uz/ru",
       catalogs: [
         { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" },
-        { year: "2023", label: t("project_catalog"), pdf: "/pdfs/2023-katalog (1).pdf" },
+        { year: "2023", label: t("project_catalog"), pdf: "/pdfs/2023-katalog-(1).pdf" },
       ],
     },
     {
@@ -88,7 +88,7 @@ export default function SectionEight({ id }) {
       descriptionColor: "#7F7F7F80",
       websiteUrl: "https://aica.uz/",
       catalogs: [
-        { year: "2022", label: t("project_catalog"), pdf: "/public/pdfs/2022-katalog_compressed.pdf" },
+        { year: "2022", label: t("project_catalog"), pdf: "/pdfs/2022-katalog_compressed.pdf" },
         { year: "2025", label: t("project_catalog"), pdf: null },
       ],
     },
@@ -102,7 +102,7 @@ export default function SectionEight({ id }) {
       websiteUrl: "https://unicorns.uz/",
       catalogs: [
         { year: "2020", label: t("project_catalog"), pdf: "/pdfs/2020-katalog_compressed.pdf" },
-        { year: "2023", label: t("project_catalog"), pdf: "/pdfs/2023-katalog (1).pdf" },
+        { year: "2023", label: t("project_catalog"), pdf: "/pdfs/2023-katalog-(1).pdf" },
       ],
     },
   ];
