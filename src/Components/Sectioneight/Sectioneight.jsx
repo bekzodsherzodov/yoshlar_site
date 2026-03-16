@@ -47,7 +47,7 @@ export default function SectionEight({ id }) {
       subtitle: t("project_university_subtitle"),
       description: t("project_university_desc"),
       descriptionColor: "#7F7F7F80",
-      websiteUrl: "https://yoshtadbirkor.uz/university",
+      websiteUrl: "https://yoshtadbirkor.uz/",
       catalogs: [
         { year: "2021", label: t("project_catalog"), pdf: "/pdfs/2021-katalog_compressed.pdf" },
         { year: "2024", label: t("project_catalog"), pdf: null },
@@ -73,7 +73,7 @@ export default function SectionEight({ id }) {
       subtitle: t("project_imkoniyat_subtitle"),
       description: t("project_imkoniyat_desc"),
       descriptionColor: "#7F7F7F80",
-      websiteUrl: "https://yoshtadbirkor.uz/imkoniyat",
+      websiteUrl: "https://yoshtadbirkor.uz/",
       catalogs: [
         { year: "2021", label: t("project_catalog"), pdf: "/pdfs/2021-katalog_compressed.pdf" },
         { year: "2024", label: t("project_catalog"), pdf: null },
